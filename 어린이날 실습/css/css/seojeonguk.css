@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body, input, textarea, select, fieldset{
+  font-family: '굴림',gulim,helvetica,'나눔바른고딕 옛한글','NanumBarunGothic YetHangul','새굴림',sans-serif;
+  font-size: 12px;
+}
+html[data-useragent*='mac'] body * {
+	font-family: 'Apple SD Gothic NEO',helvetica,sans-serif !important;
+}
+body,div, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, address, fieldset, form, object, th, td{
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4{
+  font-size:12px;
+}
+ol,ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+a:hover{text-decoration:underline;}
+a:focus{color:red;}
+img{
+  vertical-align: top;
+}
+table{
+  border-collapse: collapse;
+}
+table, th, td{
+  text-align:left;
+}
+table th{
+  font-weight:normal;
+}
+.u_skip,.blind{
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  overflow:hidden;
+}
+
+.area_magazine,
+.area_hotnews{
+  float:left;
+}
