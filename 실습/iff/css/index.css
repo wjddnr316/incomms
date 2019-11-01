@@ -1,0 +1,214 @@
+@charset="utf-8";
+
+article,aside,audio,body,button,canvas,dd,details,dl,dt,fieldset,figcaption,figure,footer,fom,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,menu,nav,ol,p,section,table,td,th,ul
+{
+	margin: 0;
+	padding: 0;
+}
+body{
+  font-size:12px;
+  font-family:font-family: '나눔고딕', 'NanumGothic', AppleSDGothicNeo-Regular, '돋움','dotum', Helvetica,;
+  background-color:#000;
+}
+html,body,.wrap,.content,.area_video{
+  height:100%;
+}
+ul,ol{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}img{
+  vertical-align:bottom;
+}
+.blind{
+  position:absolute !important;
+  overflow:hidden !important;
+  width:1px !important;
+  height:1px !important;
+  margin:-1px !important;
+  clip:rect(0,0,0,0) !important;
+}
+.wrap{
+}
+.content{
+  position:relative;
+}
+.area_logo{
+  position:absolute;
+  display:inline-table;
+  width:100%;
+  height:64.862%; top:0;
+  text-align:center;
+  z-index:10;
+}
+.area_logo .logo_item{
+  vertical-align:middle;
+  display:table-cell;
+  width:290px;
+  height:98px;
+  background:url('../img/logo_iff.png') no-repeat center;
+  background-size:290px 98px;
+}
+.area_video:after{
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  content:'';
+  background-color:rgba(0,0,0,.5);
+}
+.video_box{
+  position:relative;
+  float:left;
+  overflow:hidden;
+  width:33.333%;
+  height:100%;
+}
+.video_box video{
+  position:absolute;
+  width:101%;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
+  -moz-transform:translateX(-50%);
+  -ms-transform:translateX(-50%);
+  -o-transform:translateX(-50%);
+}
+footer{
+  position:absolute;
+  min-width:320px;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:35.138%;
+}
+.download{
+  position:absolute;
+  bottom:78.261%; left:0; width:100%;
+}
+.download .link_item{
+  display:block;
+  width:212px;
+  height:70px;
+  margin:0 auto;
+}
+.download .link_item img{
+  width:100%;
+}
+.area_sns{
+  position:absolute;
+  bottom:53.416%; left:0; right:0;
+  height:30px;
+  text-align:center;
+}
+.area_sns .sns_list{
+  overflow:hidden;
+  display:inline-block;
+}
+.area_sns .list_item{
+  float:left;
+}
+.area_sns .list_item + .list_item{
+  margin-left:35px;
+}
+.area_sns .link_item {
+  display:block;
+  height:30px;
+}
+.area_sns .link_item.facebook{
+  width:91px;
+  background:url('../img/btn_fb.png') no-repeat center top 4px;
+  background-size: 91px 17px
+}
+.area_sns .link_item.instagram{
+  background:url('../img/btn_ig.png') no-repeat center;
+  width:95px;
+  background-size:95px 25px;
+}
+.area_sns .link_item.youtube{
+  background:url('../img/btn_youtube.png') no-repeat center top 4px;
+  width:80px;
+  background-size:80px 18px;
+}
+.policy{
+  position:absolute;
+  bottom:22.731%; left:0; right:0;
+  height:12px;
+  line-height:12px;
+  text-align:center;
+}
+.policy a{
+  color:#fff;
+  letter-spacing:.4px;
+}
+
+.policy .line{
+  display:inline-block;
+  width:1px;
+  height:9px;
+  margin-left:11px;
+  margin-right:11px;
+  background-color:#747474;
+}
+@media screen and (max-width:1600px){
+  .video_box video{
+    width:auto;
+  }
+}
+@media screen and (max-width:767px){
+  .wrap{
+    min-width:320px;
+  }
+  .area_logo .logo_item{
+    width:217px;
+    background-size:217px auto;
+  }
+  .area_video{
+    overflow:hidden;
+  }
+  .video_box{
+    min-width:320px;
+    width:100%;
+    top:-100%;
+  }
+  .video_box video{
+    top:50%;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+  }
+  .download{
+  }
+  .download .link_item{
+    width:145px;
+    height:48px;
+  }
+  .area_sns{
+    height:21px;
+  }
+  .area_sns .link_item{
+    height:21px;
+  }
+  .area_sns .link_item.facebook{
+    width:68px;
+    height:14px;
+    background-position:top;
+    background-size: 68px auto;
+  }
+  .area_sns .link_item.instagram{
+    width:71px;
+    background-position:top;
+    background-size: 71px auto;
+  }
+  .area_sns .link_item.youtube{
+    width:60px;
+    height:14px;
+    background-position:top;
+    background-size: 60px auto;
+  }
+}

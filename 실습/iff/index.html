@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IFF</title>
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <section class="content">
+                <header class="area_logo">
+                  <h1 class="logo_item"><span class="blind">IFF</span></h1>
+                </header>
+                <div class="area_video">
+                  <div class="video_box">
+                      <video type="mp4" poster="./img/video_pst1.png" src="./video/1.mp4" muted loop autoplay playsinline></video>
+                  </div>
+                  <div class="video_box">
+                      <video type="mp4" poster="./img/video_pst2.png" src="./video/2.mp4" muted loop autoplay playsinline id="center_video"></video>
+                  </div>
+                  <div class="video_box">
+                      <video type="mp4" poster="./img/video_pst3.png" src="./video/3.mp4" muted loop autoplay playsinline></video>
+                  </div>
+                </div>
+            </section><!-- content -->
+            <footer>
+              <div class="download">
+                  <a href="#" class="link_item"><img src="./img/btn_download_appstore.png" alt="앱스토어에서 다운로드" /></a>
+              </div>
+              <div class="area_sns">
+                  <ul class="sns_list">
+                      <li class="list_item"><a href="#" class="link_item facebook"><span class="blind">facebook</span></a></li>
+                      <li class="list_item"><a href="#" class="link_item instagram"><span class="blind">instagram</span></a></li>
+                      <li class="list_item"><a href="#" class="link_item youtube"><span class="blind">youtube</span></a></li>
+                  </ul>
+              </div>
+              <div class="policy">
+                  <a href="#">Terms of Use</a><span class="line"></span><a href="#">Privacy Policy</a>
+              </div>
+            </footer><!-- footer -->
+        </div><!-- wrap -->
+        <script>
+              var videocontrol = document.getElementById("center_video");
+              window.addEventListener('load', function(){
+                videocontrol.play();
+              });
+        </script>
+    </body>
+</html>
