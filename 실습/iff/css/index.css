@@ -166,10 +166,7 @@ footer{
     width:217px;
     background-size:217px auto;
   }
-  .area_video{
-  }
   .video_box{
-    min-width:320px;
 		width:100%;
   }
 	.video_box:first-child,
@@ -183,8 +180,6 @@ footer{
     -ms-transform:translate(-50%,-50%);
     -o-transform:translate(-50%,-50%);
     transform:translate(-50%,-50%);
-  }
-  .download{
   }
   .download .link_item{
     width:145px;
