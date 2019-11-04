@@ -167,13 +167,15 @@ footer{
     background-size:217px auto;
   }
   .area_video{
-    overflow:hidden;
   }
   .video_box{
     min-width:320px;
-    width:100%;
-    top:-100%;
+		width:100%;
   }
+	.video_box:first-child,
+	.video_box:last-child{
+		display:none;
+	}
   .video_box video{
     top:50%;
     -webkit-transform:translate(-50%,-50%);
