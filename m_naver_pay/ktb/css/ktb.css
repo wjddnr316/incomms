@@ -1,0 +1,204 @@
+@charset="utf-8";
+
+html,body,div,p,h1,h2,h3,h4,h5,ul,ol,dl,li,dt,dd{
+  margin:0;
+  padding:0;
+}
+body{
+  font-family:'나눔고딕','NanumGothic','맑은고딕','margunGothic','돋움','dotum',Helvetica,sans-serif;
+  font-size:13px;
+  line-height:19px;
+  letter-spacing:-0.5px;
+  color:#555;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+img,a{
+  vertical-align:top;
+}
+em,i{
+  font-style:normal;
+}
+ul,ol{
+  list-style:none;
+}
+h1,h2,h3,h4,h5{
+  font-size:14px;
+}
+.blind{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+}
+.content{
+  margin-top:6px;
+}
+.content .inner{
+  position:relative;
+  max-width:375px;
+  margin:0 auto;
+}
+.btn_link{
+  display:block;
+}
+.list_title,
+.list_text{
+  font-size:13px;
+  line-height:20px;
+  margin-bottom:10px;
+}
+.list_title{
+  float:left;
+  min-width:57px;
+  margin-right:20px;
+  color:#7470d1;
+  font-weight:bold;
+}
+.list_text{
+  overflow:hidden;
+}
+.point_cl{
+  color:#776ed8;
+  font-weight:bold;
+}
+
+.spot{
+  background:#343496 url('../img/spot.jpg')no-repeat center;
+  background-size:667px 470px;
+}
+.spot .inner{
+  height:470px;
+}
+.spot .btn_link{
+  width:239px;
+  height:45px;
+  position:absolute;
+  left:68px;
+  bottom:30px;
+}
+.section_event .inner_notice{
+  display:block;
+  color:#8b8b8b;
+}
+.section_event .event_item1{
+  background:url('../img/section1.jpg')no-repeat center top;
+  background-size:375px 357px;
+}
+.section_event .event_item2{
+  background:url('../img/section2.png'),url('../img/section2_2.jpg');
+  background-repeat:no-repeat,no-repeat;
+  background-position:center top, center bottom;
+  background-size: 375px 163px, 375px 594px;
+}
+.section_event .event_item1 .inner{
+  width:300px;
+  padding-top:382px;
+  border-bottom:1px solid #e1e1e1;
+}
+.section_event .event_item2 .inner{
+  width:300px;
+  padding-top:187px;
+  padding-bottom:614px;
+}
+.section_event .event_item1 .btn_link{
+  width:240px;
+  height:45px;
+  margin:25px auto 34.5px;
+  background-color:#6668da;
+  text-align:center;
+  font-size:14px;
+  line-height:45px;
+  letter-spacing:-0.465px;
+  color:#fff;
+}
+.section_event .event_item2 .btn_link{
+  position:absolute;
+  left:30px;
+  bottom:40px;
+  width:240px;
+  height:45px;
+}
+.section_participate{
+  background: #fbfbfb url('../img/section3.jpg')no-repeat 50%;
+  background-size:375px 380px;
+}
+.section_participate .inner{
+  height:380px;
+}
+.banner{
+  background: #f4f6ff url('../img/banner.jpg')no-repeat 50%;
+  background-size:375px 130px
+}
+.banner .inner{
+  height:130px;
+}
+.banner .btn_link{
+  position:absolute;
+  left:37px;
+  bottom:15px;
+  width:65px;
+  height:10px;
+}
+.section_notice .inner{
+  width:300px;
+}
+.section_notice .notice_title{
+  margin-top: 39px;
+  font-size:14px;
+  color:#1a176b;
+  letter-spacing:-0.5px;
+}
+.section_notice .notice_title:before{
+  background:url('../img/notice.png')no-repeat center;
+  background-size:20px 20px;
+  display:inline-block;
+  width:20px;
+  height:20px;
+  margin-right:7px;
+  vertical-align:middle;
+  content:'';
+}
+.section_notice .noti_list_tit{
+  display:block;
+  margin-top:13px;
+  margin-bottom:9px;
+}
+.section_notice .noti_list_tit:first-of-type{
+  margin-top:22px;
+}
+.section_notice .list_item{
+  padding-left:6px;
+  margin-bottom:6px;
+}
+.section_notice .list_item:before{
+  display:inline-block;
+  width:2px;
+  height:2px;
+  margin-left:-6px;
+  margin-right:4px;
+  background-color:#333;
+  vertical-align:middle;
+  content:'';
+}
+.section_notice ol.notice_sub_list{
+  margin-top:6px;
+}
+.section_notice ol.notice_sub_list .sub_list_item{
+  padding-left:15px;
+}
+.section_notice ol.notice_sub_list .sub_list_item:before{
+  display:inline-block;
+  margin-left:-15px;
+  margin-right:4px;
+}
+.section_notice ol.notice_sub_list .sub_list_item:nth-child(1):before{
+  content:'1)';
+}
+.section_notice ol.notice_sub_list .sub_list_item:nth-child(2):before{content:'2)';}
+.section_notice ol.notice_sub_list .sub_list_item:nth-child(3):before{content:'3)';}
+.section_notice ol.notice_sub_list .sub_list_item:nth-child(4):before{content:'4)';}
