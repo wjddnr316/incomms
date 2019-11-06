@@ -94,7 +94,7 @@ hr {
 /* spot */
 .spot{
     position:relative;
-    background: #02c751 url('../im/bg_spot.jpg') 50% 0 no-repeat;
+    background: #fff url('../im/bg_spot.jpg') 50% 0 no-repeat;
     -webkit-background-size:667px 520px;
     background-size:667px 520px;
     margin:5px 0 0 0;
@@ -163,14 +163,14 @@ hr {
 }
 .section_event .list_title {
     float:left;
-    min-width:67px;
-    margin-right:12px;
+    width:79px;
     margin-bottom:9px;
     color:#03c75a;
     font-family:NanumSquare,HelveticaNeue-Light,Helvetica,AppleSDGothicNeo-Regular,'나눔고딕',nanumgothic,sans-serif;
     font-weight:bold;
     font-size:13px;
     line-height:21px;
+    letter-spacing:-.5px;
 }
 .section_event .list_title:before{
   display:inline-block;
@@ -191,8 +191,6 @@ hr {
     line-height:21px;
     letter-spacing:-.75px;
 }
-
-
 
 /* section_notice */
 .section_notice {

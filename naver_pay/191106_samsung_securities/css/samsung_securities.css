@@ -56,7 +56,7 @@ a:hover, a:active, a:focus {
 
 /* spot */
 .spot{
-  background: #02c751 url('../img/bg_spot.jpg') 50% 0 no-repeat;
+  background: #fff url('../img/bg_spot.jpg') 50% 0 no-repeat;
 }
 
 .spot .inner {
