@@ -1,0 +1,126 @@
+@charset="utf-8";
+
+body,div,p,ul,ol,dl,li,dt,dd,h1,h2,h3,h4,h5,h6{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:'나눔고딕','NanumGothic','맑은고딕','Margun Gothic','돋움','dotum',Helvetica,sans-serif;
+  font-size:14px;
+  line-height:23px;
+  letter-spacing:-0.84px;
+}
+ul,ol{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+sub{
+  font-size:inherit;
+  vertical-align:top;
+}
+.blind{
+  position:absolute;
+  overflow:hidden;
+  width:1px;
+  height:1px;
+  margin:-1px;
+  clip:rect(0,0,0,0);
+}
+.content{
+  margin-top:6px;
+}
+.content .inner{
+  max-width:960px;
+  height:100%;
+  margin:0 auto;
+}
+
+.spot{
+  height:830px;
+  background:url('../img/spot.jpg')no-repeat;
+}
+
+.info_list:after{
+  display:block;
+  clear:both;
+  content:'';
+}
+.list_title,
+.list_text{
+  margin-bottom:30px;
+}
+
+.list_title{
+  float:left;
+  min-width:113px;
+  margin-right:17px;
+  color:#002954;
+  font-weight:bold;
+  font-size:20px;
+  line-height:24px;
+  letter-spacing:-1px;
+}
+.list_text{
+  overflow:hidden;
+  font-size:16px;
+  line-height:24px;
+  letter-spacing:-0.48px;
+}
+.info_list .point_cl{
+  color:#008fc9;
+}
+ul.sub_list .sub_list_item{
+  padding-left:7px;
+}
+ul.sub_list .sub_list_item:before{
+  display:inline-block;
+  margin-left:-7px;
+  margin-right:3px;
+  content:'-';
+}
+ol.sub_list sub{
+  display:block;
+  padding-left:9px;
+}
+
+.section_banner{
+  background:#f7f7f7 url('../img/banner.jpg')no-repeat center;
+  height:340px;
+}
+
+.section_benefit{
+  background:url('../img/benefit.png')no-repeat center;
+  height:770px;
+}
+.section_paticipate{
+  background:#f3fbfe url('../img/paticipate.jpg')no-repeat center;
+  height:785px;
+}
+.section_cashback{
+  position:relative;
+  background:#f7f7f7 url('../img/cashback.png')no-repeat center;
+  height:454px;
+}
+.section_cashback:before{
+  position:absolute;
+  background:url('../img/logo.png')no-repeat;
+  right:0;
+  bottom:0;
+  z-index:1;
+  width:333px;
+  height:110px;
+  content:'';
+}
+.section_cashback:after{
+  position:absolute;
+  right:0;
+  left:0;
+  bottom:0;
+  height:10px;
+  background-color:#46b7e6;
+  content:'';
+}
