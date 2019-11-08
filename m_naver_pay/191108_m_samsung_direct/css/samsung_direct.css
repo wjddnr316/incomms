@@ -1,0 +1,362 @@
+@charset "utf-8";
+/* NHN Technology Services UI Development 2Team AJM */
+
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{
+    margin:0;
+    padding:0
+}
+body,input,textarea,select,button,table{
+    font-size:12px;
+    line-height:18px;
+    font-family:AppleSDGothicNeo-Regular,HelveticaNeue-Light,Helvetica,'나눔고딕',nanumgothic,sans-serif;
+    color:#252525
+}
+body.s,.s input,.s textarea,.s select,.s button,.s table{
+    font-family:Helvetica;
+}
+body {
+    position: relative;
+    -webkit-text-size-adjust: none;
+}
+fieldset,
+img {
+    border: 0;
+}
+ol,
+ul {
+    list-style: none;
+}
+address,
+em {
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+}
+hr {
+    display: none !important;
+}
+.u_skip,.blind {
+    overflow: hidden !important;
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+}
+
+/* 웹폰트 */
+@font-face {
+    font-family: 'NanumSquare';
+    src: url(../font/NanumSquareRegular.woff) format('woff'),
+    url(../font/NanumSquareRegular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'NanumSquareBold';
+    src: url(../font/NanumSquareBold.woff) format('woff'),
+    url(../font/NanumSquareBold.ttf) format('truetype');
+  }
+
+/* 프로모션 공통 기존코드 */
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background: #e9ecef !important;
+}
+.promotion_wrap {
+    position: relative;
+    min-width: 320px;
+}
+
+/* 프로모션 공통 */
+.content {
+    background-color: #e9ecef;
+}
+.content .inner {
+    overflow: hidden;
+    position: relative;
+    width: 320px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* spot */
+.spot {
+    position: relative;
+    height: 500px;
+    margin-top: 5px;
+    background: #e1e1e1 url(../im/bg_spot.png) no-repeat 50% 0;
+    background-size: 667px 500px;
+    -webkit-background-size: 667px 500px;
+}
+.spot .btn_link {
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 202px;
+    height: 37px;
+    margin-left: -101px;
+}
+
+/* sec */
+.evt {
+    padding: 27px 0 24px;
+    background-color: #fff;
+}
+.evt .txt_evt {
+    text-align: center;
+    font-family: NanumSquare,AppleSDGothicNeo-Regular,HelveticaNeue-Light,Helvetica,'나눔고딕',nanumgothic,sans-serif;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -1px;
+}
+.evt .txt_evt .date {
+    font-family: NanumSquareBold,AppleSDGothicNeo-Regular,HelveticaNeue-Light,Helvetica,'나눔고딕',nanumgothic,sans-serif;
+    font-size: 15px;
+}
+.evt02 {
+    height: 320px;
+    background: #fafafa url(../im/bg_sec02.png) 50% 0 no-repeat;
+    background-size: 667px 320px;
+    -webkit-background-size: 667px 320px;
+}
+.banner_area {
+    height: 80px;
+    background: #00bbe3 url(../im/img_banner.png) 50% 0 no-repeat;
+    background-size: 320px 80px;
+    -webkit-background-size: 320px 80px;
+}
+.evt03 {
+    height: 507px;
+    background: #fff url(../im/bg_sec04.png) 50% 0 no-repeat;
+    background-size: 320px 507px;
+    -webkit-background-size: 320px 507px;
+}
+
+/* FAQ */
+input.hidden {
+    position: absolute;
+    visibility: hidden;
+}
+.section_faq {
+    padding-bottom: 35px;
+    border-top: 1px solid #e4e4e5;
+    background-color: #fff;
+}
+.section_faq .bx_faq{
+  padding: 0 5px;
+}
+.section_faq .h_faq {
+    padding: 28px 0 7px;
+    font-family: NanumSquareBold,AppleSDGothicNeo-Regular,HelveticaNeue-Light,Helvetica,'나눔고딕',nanumgothic,sans-serif;
+    font-size: 22px;
+    line-height: 35px;
+    letter-spacing: -1px;
+    color: #043562;
+    text-align: center;
+}
+.section_faq .sp_pay_benefit,
+.section_faq .sp_pay_benefit:before {
+    background: url(../im/sp_pay_benefit.png) no-repeat -300px 0;
+    -webkit-background-size: 150px auto;
+    background-size: 150px auto;
+}
+.section_faq.hidden {
+    position: absolute;
+    visibility: hidden;
+}
+.section_faq .faq_fold_panel {
+    position: relative;
+    margin-bottom: -1px;
+    border: 1px solid #e2e6e9;
+    background-color: #ffffff;
+}
+.section_faq .faq_fold_panel:last-child {
+    margin-bottom: 0 !important;
+}
+.section_faq .faq_fold_panel ~ .faq_fold_panel:before {
+    display: block;
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    z-index: 1;
+    height: 1px;
+    background: #f1f3f5;
+    content: '';
+}
+.section_faq .faq_fold_panel .panel_heading {
+    position: relative;
+    min-height: 45px;
+}
+.section_faq .faq_fold_panel .panel_heading:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 13px;
+    width: 15px;
+    height: 8px;
+    margin: auto;
+    background-position: -50px -90px;
+    content: '';
+}
+.section_faq .faq_fold_panel .q {
+    display: block;
+    position: relative;
+    padding: 13px 41px 13px 37px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    cursor: pointer;
+    letter-spacing: -1px;
+}
+.section_faq .faq_fold_panel .txt_q {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
+    color: rgba(0,0,0,0);
+    background-position: -115px -90px;
+}
+.section_faq .faq_fold_panel .panel_body {
+    display: none;
+    position: relative;
+    padding: 13px 14px 17px;
+    border-top: 1px solid #f1f3f5;
+    background-color: #f9fafb;
+}
+.section_faq .faq_fold_panel .panel_body .img_area {
+    padding: 21px 0 3px;
+    text-align: center;
+}
+.section_faq .faq_fold_panel .panel_body .img_area img {
+    vertical-align: top;
+}
+:checked + .faq_fold_panel {
+    margin-bottom: 7px;
+}
+:checked + .faq_fold_panel + input + .faq_fold_panel:before {
+    z-index: -1;
+}
+:checked + .faq_fold_panel .panel_body {
+    display: block;
+}
+:checked + .faq_fold_panel .panel_heading:before {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.noti_lst .noti_tx {
+    position: relative;
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: -1px;
+}
+.noti_lst .noti_tit {
+    font-size: 13px;
+    line-height: 19px;
+    margin-top: 18px;
+    color: #00c73c;
+}
+.noti_lst .noti_tx a {
+    color: #000;
+}
+.noti_lst .lst_bu {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* footer */
+.footer {
+    background-color: #dcdddf;
+    padding: 34px 0 27px;
+}
+.footer .list_sns {
+    width: 232px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+}
+.list_sns .item_sns {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin: 0 5px;
+    padding: 0 0 6px;
+    background: url(../im/sp_sns.png) no-repeat;
+    background-size: 222px 103px;
+    -webkit-background-size: 222px 103px;
+}
+.list_sns li a {
+    display: block;
+    height: 48px;
+    overflow: hidden;
+}
+.list_sns .item_sns.facebook {
+    background-position: 0 0;
+}
+.list_sns .item_sns.twitter {
+    background-position: -58px 0;
+}
+.list_sns .item_sns.band {
+    background-position: -116px 0;
+}
+.list_sns .item_sns.blog {
+    background-position: -174px 0;
+}
+.list_sns .item_sns.cafe {
+    background-position: 0 -54px;
+}
+.list_sns .item_sns.line {
+    background-position: -58px -54px;
+}
+.list_sns .item_sns.talk {
+    background-position: -116px -54px;
+}
+.list_sns .item_sns.pholar {
+    background-position: -174px -54px;
+}
+.footer .copy {
+    text-align: center;
+}
+.footer .link_corp {
+    font-family: Helvetica,sans-serif;
+    color: #999;
+}
+.wrap_flick .flick_event {
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -13px;
+}
+.wrap_flick .event_list {
+    display: table;
+    overflow: hidden;
+    margin: 15px 14px;
+}
+.wrap_flick .event_list li {
+    display: table-cell;
+    padding-right: 2px;
+    line-height: 0;
+}
+.wrap_flick .tit_area {
+    position: relative;
+    height: 45px;
+    padding: 0 14px;
+    line-height: 45px;
+}
+.wrap_flick .tit_area .tit {
+    font-family: HelveticaNeue-Light,Helvetica,AppleSDGothicNeo-Semibold,"나눔고딕",nanumgothic,sans-serif;
+    font-size: 16px;
+}
