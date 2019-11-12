@@ -124,3 +124,38 @@ ol.sub_list sub{
   background-color:#46b7e6;
   content:'';
 }
+.section_notice .notice_title{
+  font-size:16px;
+  line-height:29.5px;
+  letter-spacing:-0.32px;
+  margin-top:63px;
+  margin-bottom:13px;
+  color:#002954;
+}
+.section_notice .notice_title:nth-child(3),
+.section_notice .notice_title:nth-child(5){
+  margin-top:35px;
+}
+.section_notice .list_item{
+  padding-left:10px;
+  line-height:33px;
+}
+.section_notice .list_item:before{
+  display:inline-block;
+  vertical-align:middle;
+  width:3px;
+  height:3px;
+  margin-left:-10px;
+  margin-right:4px;
+  content:'';
+  background-color:rgba(0,0,0,0.8);
+}
+.section_notice .bigtext{
+  font-weight:bold;
+  font-size:24px;
+  line-height:29px;
+  letter-spacing:-1.44px;
+}
+.section_notice .bigtext:nth-child(1){
+  margin-top:46px;
+}
