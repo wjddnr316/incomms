@@ -1,0 +1,130 @@
+@charset "UTF-8";
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+  margin: 0;
+  padding: 0
+}
+body {
+  font-family: Helvetica, "Nanum Gothic", "나눔고딕", "Malgun Gothic", "맑은고딕", Dotum, "돋움", sans-serif;
+  font-size: 12px;
+}
+ol,
+ul {
+  list-style: none;
+}
+address,
+em {
+  font-style: normal;
+}
+a,
+a:active,
+a:focus,
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+img {
+  border: 0;
+  vertical-align: top;
+}
+.blind {
+  overflow: hidden !important;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+}
+/* 프로모션 */
+#wrap {
+  width: 800px;
+  margin: 0;
+  padding: 0;
+}
+.fanship .spot {
+  position: relative;
+  height: 1962px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.tab_lang {
+    overflow: hidden;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 150px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.56);
+    background-color:#222;
+    background-color:rgba(0,0,0,0.3136);
+}
+.tab_lang:after {
+    position: absolute;
+    right:9px;
+    top: 12px;
+    content: '';
+    width: 7px;
+    height: 4px;
+    background: url('../img/ico_arrow.png') no-repeat 0 -9px;
+}
+
+.tab_lang.on:after {
+    background-position: 0 0;
+}
+
+.tab_lang li {
+    display: none;
+}
+
+.tab_lang li:first-child {
+    display: block;
+}
+
+.tab_lang.on li {
+    display: block;
+}
+
+.tab_lang li a {
+    display: block;
+    padding-left: 8px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 28px;
+}
+
+.fanship .spot .btn_link {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 116px;
+}
+
+[lang="ko"] .fanship .spot {
+  background-image: url("../img/ko/bg_fanship.png");
+}
+[lang="en"] .fanship .spot {
+  background-image: url("../img/en/bg_fanship.png");
+}
+[lang="ja"] .fanship .spot {
+  background-image: url("../img/ja/bg_fanship.png");
+}
+[lang="zh-Hans"] .fanship .spot {
+  background-image: url("../img/zh-Hans/bg_fanship.png");
+}
+[lang="zh-Hant"] .fanship .spot {
+  background-image: url("../img/zh-Hant/bg_fanship.png");
+}
+[lang="es"] .fanship .spot {
+  background-image: url("../img/es/bg_fanship.png");
+}
+[lang="id"] .fanship .spot {
+  background-image: url("../img/id/bg_fanship.png");
+}
+[lang="th"] .fanship .spot {
+  background-image: url("../img/th/bg_fanship.png");
+}
+[lang="vi"] .fanship .spot {
+  background-image: url("../img/vi/bg_fanship.png");
+}

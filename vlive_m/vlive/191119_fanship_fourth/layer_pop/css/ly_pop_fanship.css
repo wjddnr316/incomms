@@ -1,0 +1,101 @@
+@charset "UTF-8";
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+  margin: 0;
+  padding: 0
+}
+body {
+  font-family: Helvetica, "Nanum Gothic", "나눔고딕", "Malgun Gothic", "맑은고딕", Dotum, "돋움", sans-serif;
+  font-size: 12px;
+}
+ol,
+ul {
+  list-style: none;
+}
+address,
+em {
+  font-style: normal;
+}
+a,
+a:active,
+a:focus,
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+img {
+  border: 0;
+  vertical-align: top;
+}
+.blind {
+  overflow: hidden !important;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+}
+/* 프로모션 */
+.fanship .spot .spot_img{
+  width:100%;
+  height:auto;
+}
+
+.fanship .spot {
+  position: relative;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.tab_lang {
+    overflow: hidden;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 160px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.56);
+    background-color:#222;
+    background-color:rgba(0,0,0,0.3136);
+}
+.tab_lang:after {
+    position: absolute;
+    right:9px;
+    top: 12px;
+    content: '';
+    width: 10px;
+    height: 5px;
+    background: url('../img/ico_arrow.png') no-repeat 0 -6px;
+    background-size:10px auto;
+}
+
+.tab_lang.on:after {
+    background-position: 0 0;
+}
+
+.tab_lang li {
+    display: none;
+}
+
+.tab_lang li:first-child {
+    display: block;
+}
+
+.tab_lang.on li {
+    display: block;
+}
+
+.tab_lang li a {
+    display: block;
+    padding-left: 8px;
+    font-size: 15px;
+    color: #fff;
+    line-height: 28px;
+}
+
+.fanship .spot .btn_link {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  height:5.93%
+}
