@@ -7,8 +7,8 @@ body,div,p,ul,ol,dl,li,dt,dd,h1,h2,h3,h4,h5,h6{
 
 body{
   font-family:'나눔고딕','NanumGothic','맑은고딕','Margun Gothic','돋움','dotum',Helvetica,sans-serif;
-  font-size:14px;
-  line-height:23px;
+  font-size:13px;
+  line-height:18px;
   letter-spacing:-0.84px;
 }
 ul,ol{
@@ -34,16 +34,26 @@ sub{
   margin-top:6px;
 }
 .content .inner{
-  max-width:960px;
+  max-width:375px;
   height:100%;
   margin:0 auto;
 }
 
 .spot{
-  height:830px;
-  background:url('../img/spot.jpg')no-repeat;
+  height:420px;
+  background:url('../img/spot.jpg')no-repeat 50% 0;
+  background-size:667px 420px;
 }
-
+.spot:after{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  top:6px;
+  z-index:-1;
+  height:350px;
+  background-color:#2778b0;
+}
 .info_list:after{
   display:block;
   clear:both;
@@ -51,22 +61,21 @@ sub{
 }
 .list_title,
 .list_text{
-  margin-bottom:26px;
+  margin-bottom:10px;
 }
 
 .list_title{
   float:left;
-  min-width:113px;
+  min-width:71px;
   margin: 0 17px 0 15px;
   color:#002954;
   font-weight:bold;
-  font-size:20px;
-  line-height:24px;
+  font-size:13px;
   letter-spacing:-1px;
 }
 .list_text{
   overflow:hidden;
-  font-size:16px;
+  font-size:13px;
   letter-spacing:-0.48px;
 }
 .info_list .point_cl{
@@ -88,14 +97,16 @@ ol.sub_list sub{
 
 .section_banner{
   background:#f7f7f7 url('../img/banner.jpg')no-repeat center;
-  height:340px;
+  background-size:667px 306px;
+  height:306px;
 }
 .section_banner .inner{
-  margin-top:50px;
+  margin-top:34px;
 }
 .section_benefit{
   background:url('../img/benefit.png')no-repeat center;
-  height:770px;
+  background-size:667px 422px;
+  height:422px;
 }
 .section_benefit .inner{
   position:relative;
@@ -103,28 +114,31 @@ ol.sub_list sub{
 .section_benefit .btn_link{
   position:absolute;
   display:block;
-  left:305px;
-  bottom:80px;
-  width:350px;
-  height:60px;
+  left:68px;
+  bottom:41px;
+  width:240px;
+  height:40px;
 }
 .section_paticipate{
   background:#f3fbfe url('../img/paticipate.jpg')no-repeat center;
-  height:785px;
+  background-size:667px 447px;
+  height:447px;
 }
 .section_cashback{
   position:relative;
-  background:#f7f7f7 url('../img/cashback.png')no-repeat center;
-  height:454px;
+  background:#f7f7f7 url('../img/cashback.jpg')no-repeat center;
+  background-size:667px 264px;
+  height:264px;
 }
 .section_cashback:before{
   position:absolute;
   background:url('../img/logo.png')no-repeat;
+  background-size:166px 55px;
   right:0;
   bottom:0;
   z-index:1;
-  width:333px;
-  height:110px;
+  width:166px;
+  height:55px;
   content:'';
 }
 .section_cashback:after{
@@ -132,29 +146,29 @@ ol.sub_list sub{
   right:0;
   left:0;
   bottom:0;
-  height:10px;
+  height:5px;
   background-color:#46b7e6;
   content:'';
 }
 .section_cashback .btn_link{
   position:absolute;
   display:block;
-  left:776px;
-  bottom:90px;
-  width:350px;
-  height:60px;
+  left:832px;
+  bottom:70px;
+  width:240px;
+  height:40px;
 }
 .section_notice .notice_title{
-  font-size:16px;
-  line-height:29.5px;
-  letter-spacing:-0.32px;
-  margin-top:63px;
+  font-size:14px;
+  line-height:30px;
+  letter-spacing:-0.7px;
+  margin-top:15px;
   margin-bottom:18px;
   color:#002954;
 }
 .section_notice .notice_title:nth-child(3),
 .section_notice .notice_title:nth-child(5){
-  margin-top:35px;
+  margin-top:30px;
 }
 .section_notice .list_item{
   padding-left:10px;
@@ -167,8 +181,8 @@ ol.sub_list sub{
 .section_notice .list_item:before{
   display:inline-block;
   vertical-align:middle;
-  width:3px;
-  height:3px;
+  width:2px;
+  height:2px;
   margin-left:-10px;
   margin-right:4px;
   content:'';
