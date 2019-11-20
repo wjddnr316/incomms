@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@import "common/_base";
+@import "common/_font";
+@import "common/_mixin";
+
+.shopping_lesson {
+	overflow: hidden;
+	position: relative;
+	min-width:1154px;
+	font-family: 'NanumSquareR', 'Apple SD Gothic Neo', Helvetica, sans-serif;
+	//spot
+	.spot{
+		position:relative;
+		color:#fff;
+		height: 1151px;
+		background: url('../img/bg_spot.jpg') 50% 0 no-repeat;
+		text-align: center;
+		.bg_l{
+			position: absolute;
+			top: 0;
+			right: 50%;
+			width: 50%;
+			height:1151px;
+			background: url('../img/bg_left.png') 50% 0 repeat-x;
+			margin-right:900px;
+		}
+		.bg_r{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 50%;
+			height:1151px;
+			background: url('../img/bg_right.png') 50% 0 repeat-x;
+			margin-left:900px;
+		}
+
+		.spot_title{
+			font-size:64px;
+			padding-top:188px;
+		}
+		.spot_sub_title{
+			font-size: 26px;
+			padding-top: 24px;
+		}
+	}
+
+	.inner{
+		position: relative;
+		width:1194px;
+		height:100%;
+		margin:0 auto;
+	}
+
+
+
+	//content
+	//section
+	.section{
+		background: #fff url('../img/bg_section.jpg') 50% 0 no-repeat;
+		.lesson_box{
+			position: relative;
+			padding:149px 21px 262px;
+		}
+		.lesson_list{
+			&:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			li{
+				float: left;
+				vertical-align: top;
+				.lesson_title{
+					position: relative;
+					display: block;
+					width: 192px;
+					height: 192px;
+				}
+				&.lesson_health .lesson_title{
+					background: url('../img/img_lesson1.jpg') 0 0 no-repeat;
+				}
+				&.lesson_music .lesson_title{
+					background: url('../img/img_lesson2.jpg') 0 0 no-repeat;
+				}
+				&.lesson_ball .lesson_title{
+					background: url('../img/img_lesson3.jpg') 0 0 no-repeat;
+				}
+				&.lesson_martial .lesson_title{
+					background: url('../img/img_lesson4.jpg') 0 0 no-repeat;
+				}
+				&.lesson_outdoor .lesson_title{
+					background: url('../img/img_lesson5.jpg') 0 0 no-repeat;
+				}
+				&.lesson_etc .lesson_title{
+					background: url('../img/img_lesson6.jpg') 0 0 no-repeat;
+				}
+				& .lesson_title:hover:after{
+					content: '';
+					display: inline-block;
+					position: absolute;
+					top: -46px;
+					left: -36px;
+					width: 304px;
+					height: 304px;
+					z-index: 5;
+				}
+				&.lesson_health .lesson_title:hover:after{
+					background: url('../img/img_on_lesson1.png') 0 0 no-repeat;
+				}
+				&.lesson_music .lesson_title:hover:after{
+					background: url('../img/img_on_lesson2.png') 0 0 no-repeat;
+				}
+				&.lesson_ball .lesson_title:hover:after{
+					background: url('../img/img_on_lesson3.png') 0 0 no-repeat;
+				}
+				&.lesson_martial .lesson_title:hover:after{
+					background: url('../img/img_on_lesson4.png') 0 0 no-repeat;
+				}
+				&.lesson_outdoor .lesson_title:hover:after{
+					background: url('../img/img_on_lesson5.png') 0 0 no-repeat;
+				}
+				&.lesson_etc .lesson_title:hover:after{
+					background: url('../img/img_on_lesson6.png') 0 0 no-repeat;
+				}
+				&.open_list{
+					.item{
+						display: block;
+					}
+				}
+			}
+			.item{
+				display: none;
+				position: absolute;
+				top: 419px;
+				left: 0;
+				right: 0;
+				text-align: center;
+				a{
+					display: inline-block;
+					height: 68px;
+					padding: 0 47px 0 45px;
+					margin: 0 8px 6px 0;
+					line-height: 68px;
+					background-color: #06dd81;
+					font-size: 20px;
+					color: #fff;
+					&:after{
+						content: '';
+						display: inline-block;
+						width: 9px;
+						height: 14px;
+						vertical-align: top;
+						margin: 26px 0 0 13px;
+						background: url(../img/img_item_icon.png) no-repeat;
+					}
+				}
+			}
+		}
+	}
+
+	//section2
+	.section2{
+		height:875px;
+		background: #f4f4f4 url('../img/bg_section2.jpg') 50% 0 no-repeat;
+		.shopping_benefit{
+			overflow: hidden;
+			text-align: center;
+			padding-top: 651px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+		.shopping_benefit li{
+			float:left;
+			width:398px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			color:#666;
+			&.benefit_lesson{
+				padding-right: 25px;
+			}
+			&.benefit_handy{
+				padding-left: 3px;
+			}
+			&.benefit_shopping{
+				padding-left: 37px;
+			}
+		}
+	}
+
+	//section3
+	.section3{
+		position:relative;
+		height:225px;
+		background: #fff url('../img/bg_section3_v2.png') 50% 0 no-repeat;
+		.bg_l{
+			position: absolute;
+			top: 0;
+			right: 50%;
+			width: 50%;
+			height:100%;
+			background: url('../img/bg_section_left_v2.jpg') 50% 0 repeat-x;
+			margin-right:900px;
+		}
+		.bg_r{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 50%;
+			height:100%;
+			background: url('../img/bg_section_right_v2.jpg') 50% 0 repeat-x;
+			margin-left:900px;
+		}
+		.link_exhibition{
+			@include btnLink(100%,100%);
+			left:0;
+			top:0;
+		}
+	}
+
+
+
+	//section4
+	.section4{
+		height:245px;
+		background: #ebfff9 url('../img/bg_section4.png') 50% 0 no-repeat;
+		.link_benefit{
+			@include btnLink(100%,100%);
+			left:0;
+			top:0;
+		}
+	}
+
+
+
+	//section5
+	.section5{
+		height:426px;
+		text-align:center;
+		background: #fff url('../img/bg_section5_v2.jpg') 50% 0 no-repeat;
+		.btn_area{
+			display:inline-block;
+			padding-top: 191px;
+			a{
+				display:block;
+				float:left;
+				width:364px;
+				height:88px;
+				&:first-child{
+					margin-right:17px;
+				}
+			}
+		}
+	}
+}

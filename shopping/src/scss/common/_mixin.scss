@@ -1,0 +1,35 @@
+/* border-radius */
+@mixin border-radius($rad) {
+	-o-border-radius: $rad;
+	-ms-border-radius: $rad;
+	-moz-border-radius: $rad;
+	-webkit-border-radius: $rad;
+	border-radius: $rad;
+}
+/* background-size */
+@mixin background-size($size) {
+	-o-background-size: $size;
+	-ms-background-size: $size;
+	-moz-background-size: $size;
+	-webkit-background-size: $size;
+	background-size: $size;
+}
+
+// image
+@mixin sprites()
+{
+overflow:hidden;
+display:inline-block;
+vertical-align:top;
+background: url(../im/spr_character3.png) no-repeat;
+-webkit-background-size:30px 100px;
+background-size:30px 100px;
+color:transparent;
+}
+
+// button
+@mixin btnLink($width,$height){
+	position:absolute;
+	width:$width;
+	height:$height;
+}
