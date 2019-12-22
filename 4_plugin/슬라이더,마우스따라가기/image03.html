@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider3 : 롤링 슬라이드 배너 만들기</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+		* {margin: 0; padding: 0;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+        body {background: #333;}
+        h2 {color: #2EDF19; font-family: 'Lato'; font-weight: 300; padding: 20px;}
+
+        .slide_wrap {
+            width: 100%; padding:10px 20px; 
+            background: rgba(0,0,0,0.1); 
+            position: absolute; left: 50%; top: 50%; 
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+        }
+        .slide_show {width:860px; overflow:hidden; position:relative; margin:10px auto;}
+        
+        .slide_img {width:5000px; overflow: hidden;}
+        .slide_img > div {float:left; width:280px; padding: 5px;}
+        .slide_img > div img {width: 100%;}
+        
+        .slide_btn a {
+            position: absolute; top: 50%; transform: translateY(-50%); 
+            width: 60px; height: 60px; border-radius: 50%; 
+            background-color: #000; text-align: center; line-height: 60px; text-decoration: none; color:#fff; transition: all 0.3s ease; color: #fff;
+            font-size: 24px;
+        }
+        .slide_btn a.prev {left: 30px;}
+        .slide_btn a.next {right: 30px;}
+
+	</style>
+</head>
+<body>
+    <h2>Image Slider3 : 롤링 슬라이드 배너 만들기</h2>
+    
+    <div class="slide_wrap">
+        <div class="slide_show">
+            <div class="slide_img">
+                <div class="slide"><a href="#"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover01.jpg" alt="사진1" /></a></div>
+                <div class="slide"><a href="#"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover02.jpg" alt="사진2" /></a></div>
+                <div class="slide"><a href="#"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover03.jpg" alt="사진3" /></a></div>
+                <div class="slide"><a href="#"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="사진4" /></a></div>
+                <div class="slide"><a href="#"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="사진5" /></a></div>
+            </div>
+        </div>
+        <div class="slide_btn">
+            <a href="#" class="prev"><i class="fa fa-angle-left"></i></a>
+            <a href="#" class="next"><i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            var container = $(".slide_wrap");
+            var slideShow = container.find(".slide_show");
+            var slideImg = slideShow.find(".slide_img");
+            var slides = slideImg.find(">div");
+            var slideBtn = container.find(".slide_btn");
+            
+            var slideCount = slides.size();
+            var slideWidth = slides.innerWidth();
+            var slideBtn = $(".slide_btn");
+            
+            var show_num = 3; 
+            var num = 0; 
+            
+            var slideCopy = $(".slide:lt("+show_num+")").clone(); 
+            slideImg.append(slideCopy);
+            
+            //이미지 움직이기
+            function back() {
+                if(num == 0){  
+                    num = slideCount;
+                    slideImg.css("margin-left",-num * slideWidth+"px");
+                }
+                num--;  
+                slideImg.stop().animate({marginLeft:-slideWidth * num+"px"},500);
+            }
+            function next() {
+                if(num == slideCount){ 
+                    num=0;
+                    slideImg.css("margin-left",num);
+                }
+                num++; 
+                slideImg.stop().animate({ marginLeft:-slideWidth * num+"px" },500)
+            }
+
+            //버튼 클릭하기
+            slideBtn.on("click","a",function(){
+                if( $(this).hasClass("prev") ){
+                    back();
+                } else {
+                    next();
+                }
+            });
+            
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

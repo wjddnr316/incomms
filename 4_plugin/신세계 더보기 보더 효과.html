@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        *{margin:0; padding:0; box-sizing:border-box;}
+        ul,ol{list-style:none;}
+        a{text-decoration:none; color:#666;}
+        div.btn{}
+        a.view_more{
+            display:block; 
+            width:150px; height:50px; line-height:50px; 
+            position:relative;
+            margin:0 auto;
+            top:300px;
+            text-align:center;
+            text-transform:uppercase;
+            letter-spacing:3px;
+            font-size:.8em;
+            overflow:hidden;
+        }
+        a.view_more span{display:block; width:100%; height: 100%; position:absolute; left:0;}
+        a.view_more span.txt{display:inline; transform:translateY(5px); }
+        a.view_more span.bt_line
+        {width:70%; left:50%; bottom:0; border-bottom:2px solid brown; transform:translateX(-50%);
+        }
+        a.view_more span.ltrt_line{/*width:70%; border-bottom:2px solid brown; left:50%; transform:translate(-50%,0); overflow:hidden;*/}
+        a.view_more span.ltrt_line:before{
+            content:'';
+            position:absolute;
+            left:0; bottom:0;
+            width:100%;
+            height:0px;
+            box-sizing:border-box;
+            border-right:2px solid transparent;
+            transition: .25s height linear .5s;
+            transition-delay:inherit;
+        }
+        a.view_more span.ltrt_line:after{
+            content:'';
+            position:absolute;
+            left:0;top:0;
+            width:100%;
+            height:0;
+            box-sizing:border-box;
+            border-top:2px solid transparent;
+            border-left:2px solid transparent;
+            transform:translateX(100%);
+            transition-delay:inherit;
+        }
+        
+        
+        a.view_more:hover span.txt{transform:translateY(0); transition:.25s linear;}
+        a.view_more:hover span.bt_line{width:100%; transition:.25s width linear;}
+        /*a.view_more:hover span.line{width:100%; transition:.25s width linear;}*/
+        a.view_more:hover span.ltrt_line:before{
+            border-color:brown;
+            height:100%; 
+            transition: .25s height linear .25s;
+        }
+        a.view_more:hover span.ltrt_line:after{
+            border-color:brown;
+            height:100%;
+            transform:translateX(0);
+            transition: .25s transform linear .5s, .25s height linear .75s;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <a href="#" class="view_more">
+            <span class="bt_line"></span>
+            <span class="txt">view more</span>
+            <span class="ltrt_line"></span>
+        </a>
+    </div>
+</body>
+</html>

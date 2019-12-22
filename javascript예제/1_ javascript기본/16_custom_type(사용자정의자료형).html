@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>try,catch,finally</title>
+        <style></style>
+        
+       
+    </head>
+    <body>
+        <h1></h1>
+        
+        <script type="text/javascript">
+            //사용자 정의 객체
+            //{ 변수명: 값, 변수명:값 }
+              
+            
+            var aboutMe = {
+                fullN: "jeonguk",
+                old: 28,
+                sex: "M",
+                ID:"wjddnr316",
+                password:"XXXXXx",
+                plus: function(){this.old += 1;},
+                minus: function(){this.old -= 1;}
+                };
+            
+            aboutMe.plus();
+            document.write(aboutMe.old+"<br><br>");
+            
+            var txt = " ";
+            
+            for(var i in aboutMe){
+                txt += aboutMe[i]+"<br>";
+            }
+            document.write(txt);
+            var myCar = {
+                maker: "BMW",
+                model: "X5",
+                year: 2013,
+                speed: 60,
+                speedDown: function(){this.speed -= 10 ;}, 
+                //함수의경우 함수명:function(){조지자}
+                speedUp: function(){this.speed += 10; }
+            };
+            myCar.speedUp();
+            myCar.model = "520D";
+            
+            document.write(myCar["speed"]+"<br>");
+            //객체["변수명"]
+            //객체.변수명
+            document.write(myCar.maker+"<br>");
+            document.write(myCar["model"]+"<br><br>");
+            
+            txt = " ";
+            for(var i in myCar){
+                txt += myCar[i]+"<br>";
+            }
+            document.write(txt);  
+            
+        </script>
+        
+        
+    </body>
+</html>

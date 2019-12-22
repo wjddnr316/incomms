@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            
+        </style>
+        
+       
+    </head>
+    <body>
+        <div id="target" onclick="addtext('동적으로 추가')" style="font:20px bold;">여기를 클릭하세요</div>
+        <div id="div1">
+            <p id="p1">첫번째 단락</p>
+            <p id="p2">두번째 단락</p>
+        </div>
+        <button onclick="removeNod()">단락 제거</button>
+        
+        <script type="text/javascript">
+            function addtext(t){
+                if(document.createTextNode){
+                    var br = document.createElement("br");
+                    document.getElementById("target").appendChild(br);
+                    var btn = document.createElement("button");
+                    var node = document.createTextNode(t);
+                    btn.appendChild(node);
+                    document.getElementById("target").appendChild(btn);
+                }
+            }
+            
+            
+            
+            function removeNod(){
+                var parent = document.getElementById("div1");
+                var child = parent.firstElementChild;
+                parent.removeChild(child); //div1태그의 자식노드 제거
+            }
+        </script>
+    </body>
+</html>

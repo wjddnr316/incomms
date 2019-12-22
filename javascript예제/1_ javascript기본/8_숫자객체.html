@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>숫자객체</title>
+        <style></style>
+    </head>
+    <body>
+        <h1>Number.MAX_VALUE 가장큰 수</h1>
+        <h1>Number.MIN_VALUE 가장작은 수</h1>
+        <h1>parseInt(); 정수값만 뽑아내기</h1>
+        <h1>parseFloat(); 실수값뽑아내기</h1>
+        <script type="text/javascript">
+            var num1 = "30.5px";
+            var num2 = 40;
+            
+            document.write("표현 가능한 가장 큰 수 :" + Number.MAX_VALUE + "<br>");
+            document.write("표현가능한 가장 작은 수 :" + Number.MIN_VALUE + "<br>");
+            
+            //숫자가 아닌경우
+            document.write("숫자가 아닌경우 : " + Number.NaN + "<br>"); //NaN = "not a number" 의약자
+            document.write(isNaN(num1)+"<br>"); //숫자가 아니면 true
+            document.write(isNaN(num2)+"<br>"); //숫자가 맞으면 false
+            document.write(parseInt(num1) + num2 + "<br>"); //정수값 뽑아내기 parseInt()
+            document.write(parseFloat(num1) + num2 + "<br>"); //실수값까지 뽑아내기 parseFloat()
+        </script>
+    </body>
+</html>

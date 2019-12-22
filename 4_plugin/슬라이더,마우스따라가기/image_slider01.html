@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document : 이미지 슬라이드(종합)</title>
+    <style>
+		* {margin: 0; padding: 0;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+        body {background: #ff3739}
+        
+        #main {
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            -webkit-clip-path:polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 0% 0%);
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+        #slider {
+            width: 300%;
+            position: relative;
+            left: 0;
+        }
+        #slider img {
+            width: 33.333%;
+            float: left;
+        }
+        #nxtbtn,#prvbtn {
+            height: 35px;
+            width: 35px;
+            background-color: #fff;
+            font-size: 25px;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 35px;
+            position: fixed;
+            top: 85%;
+            left: 53%;
+            cursor: pointer;
+        }
+        #prvbtn {
+            left: 47%;
+        }
+      
+	</style>
+</head>
+<body>
+
+    <div id="main">
+        <div id="slider">
+            <img src="https://tistory3.daumcdn.net/tistory/2808281/skin/images/background01.jpg" alt="">
+            <img src="https://tistory3.daumcdn.net/tistory/2808281/skin/images/background02.jpg" alt="">
+            <img src="https://tistory3.daumcdn.net/tistory/2808281/skin/images/background03.jpg" alt="">
+        </div>
+        
+        <div id="nxtbtn">&#8594;</div>
+        <div id="prvbtn">&#8592;</div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $count = 1;
+        
+        $("#nxtbtn").click(function(){
+            if($count == 1){
+                shrink();
+                $("#slider").delay(1000).animate({left:"-100%"},1000);
+                zoom();
+                $count = 2;
+            } else if($count == 2){
+                shrink();
+                $("#slider").delay(1000).animate({left:"-200%"},1000);
+                zoom();
+                $count = 3;
+            }
+        });
+        
+        $("#prvbtn").click(function(){
+            if($count == 3){
+                shrink();
+                $("#slider").delay(1000).animate({left:"-100%"},1000);
+                zoom();
+                $count = 2;
+            } else if($count == 2){
+                shrink();
+                $("#slider").delay(1000).animate({left:"0%"},1000);
+                zoom();
+                $count = 1;
+            }
+        });
+        
+        function shrink(){
+            $("#main").css({'-webkit-clip-path':"polygon(10% 20%, 0% 100%, 100% 100%, 100% 0, 10% 20%)"});
+
+            setTimeout(function(){
+                $("#main").css({'-webkit-clip-path':"polygon(10% 20%, 0% 100%, 100% 100%, 90% 20%, 10% 20%)"});
+            },150);
+            
+            setTimeout(function(){
+                $("#main").css({'-webkit-clip-path':"polygon(10% 20%, 0% 100%, 90% 80%, 90% 20%, 10% 20%)"});
+            },300);
+            
+            setTimeout(function(){
+                $("#main").css({'-webkit-clip-path':"polygon(10% 20%, 10% 80%, 90% 80%, 90% 20%, 10% 20%)"});
+            },450);
+        } 
+        
+        function zoom(){
+            setTimeout(function(){
+                $("#main").css({'-webkit-clip-path':"polygon(10% 20%, 0% 100%, 90% 80%, 90% 20%, 10% 20%)"});
+            },2000);
+            
+            setTimeout(function(){
+                $("#main").css({'-webkit-clip-path':"polygon(10% 20%, 0% 100%, 100% 100%, 90% 20%, 10% 20%)"});
+            },2150);
+            
+            setTimeout(function(){
+                $("#main").css({'-webkit-clip-path':"polygon(10% 20%, 0% 100%, 100% 100%, 100% 0, 10% 20%)"});
+            },2300);
+            
+            setTimeout(function(){
+                $("#main").css({'-webkit-clip-path':"polygon(0% 0%, 0% 100%, 100% 100%, 100% 0, 0% 0%)"});
+            },2450);
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

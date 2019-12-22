@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        var req = new XMLHttpRequest();
+        req.onreadystatechange = function a(){
+            console.log(this.readyState, this.status);
+            //f12 개발자 도구에서 req.readyState; 해서 나오는 숫자가 0:open 메소드 호출 전 1:open메소드 호출 후 2:보낸 요청에 대해 응답에 헤더가 수신된 경우 3:응답 메세지에 바디 부분이 수신중일 때 4:모든응답이 완료 되었을때
+            //status해서 나온 값이 200=ok 404=error  500=internet error
+            if (this.readyState == 4 && this.status == 200){
+                console.log(this.response);
+            }
+        }
+        req.open("GET", "http://www.naver.com");
+        req.send();
+        
+        
+    </script>
+</head>
+
+<body>
+        <h1>AJAX란 브라우저에서 페이지를 이동하지 않고 자바스크립트를 통하여 HTTP Request를 보내고 그 응답을 받아 처리할 수 있는기술을 말한다 Asynchronous javascript and XML</h1>
+        <p>사용자에게 더 나은 사용 경험 제공, 대부분의 웹사이트에서 사용되고 있는 기술</p>
+</body>
+
+<footer>
+</footer>
+</html>

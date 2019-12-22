@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        
+        <style>
+            h2{color:midnightblue;}
+            p{margin-left:100px; line-height:30px;}
+            strong{margin-left:-40px; font-size:1.2em; color:brown;}
+        </style>
+        
+        <script type="text/javascript">
+            
+            function checkNotEmpty(field){
+                if(field == " "){
+                    alert("입력해주세요");
+                    field.focus();
+                    return false;
+                }
+                var s = field.value;
+                if(s.length >=2 && s.length <=8){
+                    return true;
+                }else{
+                    alert("이름은 2~8자로 입력하세요");
+                    return false;
+                }
+                return true;
+            }
+            
+        </script>
+       
+    </head>
+    <body>
+        <form>
+            <label for="user" value="userid">이름</label>
+            <input type="text" id="user">
+            <input type="button" onclick="checkNotEmpty(document.getElementById('user'))" value="확인">
+        </form>
+    </body>
+</html>

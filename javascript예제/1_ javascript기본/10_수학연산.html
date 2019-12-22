@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>수학연산</title>
+        <style></style>
+    </head>
+    <body>
+        숫자를 입력하세요
+        <input id="number1">
+        <br>
+        결과
+        <input id="total">
+        <br>
+        <input type="button" value="SIN" onclick="calc(1)">
+        <input type="button" value="LOG" onclick="calc(2)">
+        <input type="button" value="SQRT" onclick="calc(3)">
+        <input type="button" value="ABS" onclick="calc(4)">
+        
+        <script type="text/javascript">
+            function calc(type){
+                x = document.getElementById("number1").value;
+                var y ="0";
+                switch (type){
+                    case 1:
+                        y = Math.sin((x * Math.PI) / 180.0);
+                        break;
+                    case 2:
+                        y = Math.log(x);
+                        break;
+                    case 3:
+                        y = Math.sqrt(x);
+                        break;
+                    case 4:
+                        y = Math.abs(x);
+                        break;
+                }
+                document.getElementById("total").value = y;
+            }
+        </script>
+    </body>
+</html>

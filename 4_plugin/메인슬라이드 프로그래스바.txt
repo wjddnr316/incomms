@@ -1,0 +1,68 @@
+
+#main_slide_div .slider-progress {
+  width: 100%;
+  height:5px;
+  background: rgba(255,255,255,0.5);
+  position: absolute;
+  bottom: 0;
+}
+#main_slide_div .slider-progress .progress {
+  width: 0%;
+  height: 5px;
+  background: green;
+
+
+
+
+//메인슬라이드 타이머 도트
+	var time = 2;
+		  var $bar,
+			$slick,
+			isPause,
+			tick,
+			percentTime;
+
+		  $slick = $('#main_slide_div .slider');
+		      $("#main_slide_div .center").slick({
+				dots: true,
+				infinite: true,
+				fade: true,
+				autoplay:true,
+				autoplaySpeed:10000,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  });
+		  $bar = $('#main_slide_div .slider-progress .progress');
+
+		  function startProgressbar() {
+			resetProgressbar();
+			percentTime = 0;
+			isPause = false;
+			tick = setInterval(interval, 30);
+		  }
+
+		  function interval() {
+			if (isPause === false) {
+			  percentTime += 1 / (time + 0.1);
+			  $bar.css({
+				width: percentTime + "%"
+			  });
+			  if (percentTime >= 100) {
+				$slick.slick('slickNext');
+				startProgressbar();
+			  }
+			}
+		  }
+
+		  function resetProgressbar() {
+			$bar.css({
+			  width: 0 + '%'
+			});
+			clearTimeout(tick);
+		  }
+
+		  startProgressbar();
+
+		  $('#main_slide_div .slick-next,#main_slide_div .slick-prev').click(function() {
+			startProgressbar();
+		});

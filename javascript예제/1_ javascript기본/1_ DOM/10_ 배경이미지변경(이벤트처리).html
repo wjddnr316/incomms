@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            body{background:url('img/k062534177_1.jpg');}
+            
+        </style>
+        <script type="text/javascript">
+           function change(img){
+               document.body.style.backgroundImage = "url(" + img + ")";
+           }
+        </script>
+       
+    </head>
+    <body>
+        <h2>배경이미지 바꾸기</h2>
+        <input type="button" value="배경1" onclick="change('img/k892534784_1.jpg')">
+        <input type="button" value="배경2" onclick="change('img/k062534177_1.jpg')">
+    </body>
+</html>

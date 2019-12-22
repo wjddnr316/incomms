@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>아코디언메뉴.js</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	
+	
+
+<style type="text/css">
+*{margin:0; padding:0; box-sizing:border-box;}
+ul li{list-style:none;}
+    
+.accordion {
+    background-color:antiquewhite;
+    width:100%;
+    padding:18px;
+    transition:.3s;
+    text-align:left;
+    border:none;
+    cursor:pointer;
+}
+ .accordion:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}   
+    
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 18px;
+    background-color: white;
+    transition:.3s;
+    display:none;
+}
+.panel.on{
+    display:block;
+}   
+
+</style>
+    
+</head>
+<body>
+    <button class="accordion">section 1</button>
+    <div class="panel">
+        <p>아코디언 메뉴 오픈</p>
+    </div>
+    <button class="accordion">section 1</button>
+    <div class="panel">
+        <p>아코디언 메뉴 오픈</p>
+    </div>
+    <button class="accordion">section 1</button>
+    <div class="panel">
+        <p>아코디언 메뉴 오픈</p>
+    </div>
+    
+    
+    <script type="text/javascript">
+        var acc = document.querySelectorAll(".accordion");
+        var i;
+        for(i=0; i <acc.length; i++){
+            acc[i].addEventListener("click",function(){
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("on");
+            });
+        };
+        
+        const calculator = {
+            plus: function(a,b){
+                return a+b;
+            },
+            minus: function(a,b){
+                return a-b;
+            },
+            gop: function(a,b){
+                return a*b;
+            },
+            nanum: function(a,b){
+                return a/b;
+            }
+        }
+        const plus = calculator.plus(5,5);
+        const minus = calculator.minus(5,5);
+        const gop = calculator.gop(5,5);
+        const nanum = calculator.nanum(5,5);
+        console.log(plus,minus,gop,nanum);
+        /*var acc = document.querySelectorAll(".accordion");
+        var i;
+        for(i = 0; i < acc.length; i ++){
+            acc[i].addEventListener("click",function(){
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if(panel.style.display == "block"){
+                    panel.style.display = "none";
+                }else{
+                    panel.style.display = "block";
+                };
+            });
+        };*/
+	</script>
+</body>
+</html>

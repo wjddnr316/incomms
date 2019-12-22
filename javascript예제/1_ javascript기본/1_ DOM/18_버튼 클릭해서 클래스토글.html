@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        
+        <style>
+            *{margin:0; padding:0; box-sizing:border-box;}
+            body{height:3000px;}
+            ul li{list-style:none;}
+            div.btn_container{width:50%; margin:50px auto; background:#ddd; position:fixed;}
+            div.btn_container button{width:100%;}
+            
+            div.hide_navi_container{position:absolute; left:0; top:20%;   width:100px; padding:10px; background-color:red; color:#fff; display:none;}
+            #navi_container.active{display:block; top:500px; left:300px; background:blue;}
+            
+            div.opened_navi_container{position:fixed; left:0; top:23%; width:100px; height:500px; background:red;}
+        </style>
+        
+       <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+        
+    </head>
+    <body>
+        <div class="btn_container">
+            <div class="btn">
+                <h1 id="title">청구항보기</h1>
+                <button id="btn">나는 버튼이야</button>
+            </div>
+        </div>
+        <div class="hide_navi_container" id="navi_container">
+            <div class="content_zone">
+                <ul>
+                    <li><a>메뉴</a></li>
+                    <li><a>메뉴</a></li>
+                    <li><a>메뉴</a></li>
+                    <li><a>메뉴</a></li>
+                    <li><a>메뉴</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="opened_navi_container" id="open_navi">
+            <ul>
+                <li><a>메인</a></li>
+                <li><a>메인</a></li>
+                <li><a>메인</a></li>
+                <li><a>메인</a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            /*$(function(){
+                var btn = $("#btn");
+                var menuZone = $("#navi_container");
+                var bmenuZone = $("#open_navi");
+                $("#btn").on("click", function(){
+                    menuZone.toggleClass("active");
+                    if(btn.html() === "나는 버튼이야"){
+                        btn.html("나를 눌러 닫으세요");
+                        bmenuZone.css("top","30%");
+                    }else{
+                        btn.html("나는 버튼이야");
+                        bmenuZone.css("top","20%");
+                    };
+                });
+            })*/
+            /*$(function(){
+                $("#btn").on("click",function(){
+                    $("#navi_container").toggleClass("active");
+                })
+            })*/
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click",function(){
+            document.getElementById("navi_container").classList.toggle("active");
+            
+            var openMenu = document.getElementById("open_navi");
+            if(btn.innerHTML === "나는 버튼이야"){
+                document.getElementById("title").innerHTML = "창구항닫기"
+                openMenu.style.top = "30%";
+                btn.innerHTML = "닫기";
+            }else{
+                document.getElementById("title").innerHTML = "창구항보기"
+                btn.innerHTML = "나는 버튼이야";
+                openMenu.style.top = "23%";
+            }
+        });
+        </script>
+    </body>
+</html>

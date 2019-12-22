@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            
+            
+        </style>
+        <script type="text/javascript">
+            
+           function mouseIn(obj){
+               obj.style.fontSize = "50px";
+               obj.style.border = "2px solid red";
+               obj.style.width = "300px";
+               console.log(obj);
+           }
+            
+            function mouseOut(obj){
+                obj.style.fontSize = "16px";
+                obj.style.width = "200px";
+                obj.style.border = "";
+            }
+        </script>
+       
+    </head>
+    <body>
+        <div style="background-color:yellow; width:200px;" onmouseover="mouseIn(this) "onmouseout="mouseOut(this)">마우스이벤트</div>
+    </body>
+</html>

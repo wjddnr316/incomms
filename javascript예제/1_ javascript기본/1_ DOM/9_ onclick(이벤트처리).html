@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            
+        </style>
+        <script type="text/javascript">
+         
+        function changeColor(a){
+            document.body.style.backgroundColor = a;
+        }
+        function changeText(b){
+            document.body.style.color = b;
+        }
+        function viewDate(){
+            var now = new Date();
+            var local = now.toLocaleString();
+            document.getElementById("time").innerHTML = local;
+            setInterval("viewDate()",1000);
+        }
+        
+        </script>
+       
+    </head>
+    <body id="target" onload="viewDate()">
+        <h2>배경 색상 변경(click event)</h2>
+        <div id="time"></div>
+        <input type="button" value="blue" onclick="changeColor('blue'); changeText('#fff')">
+        <input type="button" value="red" onclick="changeColor('red');changeText('blue')">
+        <input type="button" value="yellow" onclick="changeColor('yellow');changeText('red')">
+        
+        
+    </body>
+</html>

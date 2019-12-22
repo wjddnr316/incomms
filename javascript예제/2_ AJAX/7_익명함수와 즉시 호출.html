@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <style>
+    </style>
+    
+</head>
+
+<body>
+    <h1>anonymous function</h1>
+    <p>
+    익명함수의 정의
+    함수의 이름이 없이 정의 가능
+    인자로 바로 전달 가능
+        
+    setTimeout(
+        function (){
+            //함수 내용
+        },
+    3000 );
+    </p>
+    
+    <p>
+    익명함수의 정의와 호출
+    익명함수 정의 후 바로 호출
+        
+    function (){
+        //함수 내용
+    }();
+    </p>
+    
+    
+    
+<script type="text/javascript">
+    var sum = 0;
+    for( var i = 1; i <= 50; i ++){
+        sum += i;
+    }
+    
+    
+    (function(){
+        for (var i = 1; i <= 5; i ++){
+            console.log(i);
+        }
+    })();
+    
+    
+    for( ; i <=100; i++){
+            sum += i;
+        }
+   
+    console.log(sum);
+    
+    setTimeout(
+        function(){
+            console.log("timeout")
+        },
+    3000);
+</script>
+</body>
+
+<footer>
+</footer>
+</html>

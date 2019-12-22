@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            *{margin:0; padding:0; box-sizing:border-box;}
+            ul{list-style:none;}
+            header{width:50%; margin:0 auto; background:pink; height:50px;}
+            .header-wrap.active{transform:translateX(-50%);}
+            header>ul{width:80%; margin:0 auto; height:50px;  text-align:center; position:relative;}
+            li.main{width:25%; height:50px; line-height:50px; float:left; background:red;}
+            li.main ul{width:100%; background:green; color:#fff; position:absolute; top:100%; left:0;}
+            li.main ul li{width:25%; float:left; display:none;}
+            li.main:hover ul li{display:block;}
+            li.main:nth-child(4) ul{width:25%; left:75%;}
+            li.main:nth-child(4) ul li{width:100%;}
+            
+            ol{margin-left:50px;}
+
+            #activemenu{position:absolute; left:50%; width:300px; padding:20px 0;}
+            div.right-content{width:50%; height:300px; background:yellow; position:absolute; left:100%;}
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+        
+       
+    </head>
+    <body>
+        <div class="header-wrap">
+            <header class="nav">
+                <ul>
+                    <li class="main">일번
+                        <ul>
+                            <li>서브1</li>
+                            <li>서브</li>
+                            <li>서브</li>
+                            <li>서브</li>
+                        </ul>
+                    </li>
+                    <li class="main">이번
+                        <ul>
+                            <li>서브2</li>
+                            <li>서브</li>
+                            <li>서브</li>
+                            <li>서브</li>
+                        </ul>
+                    </li>
+                    <li class="main">삼번
+                        <ul>
+                            <li>서브3</li>
+                            <li>서브</li>
+                            <li>서브</li>
+                            <li>서브</li>
+                        </ul>
+                    </li>
+                    <li class="main">사번
+                        <ul>
+                            <li>서브4</li>
+                            <li>서브</li>
+                            <li>서브</li>
+                            <li>서브</li>
+                        </ul>
+                    </li>
+                </ul>
+            </header>
+            <input type="button" value="메뉴" id="activemenu">
+            <div class="right-content">
+                <div class="right-element">
+                </div>
+            </div>
+        </div>
+        <ol>
+            <li>ol</li>
+            <li>ol</li>
+            <li>ol</li>
+        </ol>
+        <dl>
+            <dt>용어설명</dt>
+            <dd>용어는 무엇이다</dd>
+        </dl>
+        <script type="text/javascript">
+            $(function(){
+                $("#activemenu").on("click",function(){
+                    $(".header-wrap").toggleClass("active");
+                });
+            });
+        </script>
+    </body>
+</html>

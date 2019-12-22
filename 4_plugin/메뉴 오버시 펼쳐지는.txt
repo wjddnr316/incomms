@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="utf-8" >
+
+<title></title>
+
+<style>
+*{margin:0;padding:0;}
+
+ul{width:200px;padding:20px;background-color:pink;list-style:none;text-align:center;cursor:pointer;}
+li{background-color:yellow;padding:20px;list-style:none;width:200px;text-align:center;display:none;cursor:pointer;}
+
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+
+
+$(function(){
+
+	
+	
+/*선택요소 범위내에서 마우스를 올렸을때 이벤트가 발생*/	
+	        $("ul.a1").mouseenter(function(){
+			$("li.a1:not(:animated)").slideDown("slow");
+			});
+            $("ul.a1").mouseleave(function(){
+			$("li.a1:not(:animated)").slideUp("slow");
+			});	
+
+
+			$("ul.a2").mouseenter(function(){
+			$("li.a2:not(:animated)").slideDown("slow");
+			});
+			$("ul.a2").mouseleave(function(){
+			$("li.a2:not(:animated)").slideUp("slow");
+			});	
+
+			 $("ul.a3").mouseenter(function(){
+			$("li.a3:not(:animated)").slideDown("slow");
+			});
+			$("ul.a3").mouseleave(function(){
+			$("li.a3:not(:animated)").slideUp("slow");
+			});	
+			
+			
+				
+
+
+
+$("ul").mouseover(function(){ 
+			
+			
+			$(this).css("background","red");
+		});
+$("ul").mouseout(function(){ 
+			
+			$(this).css("background","pink");
+		});
+		
+$("li").mouseover(function(){ 
+			
+			
+			$(this).css("background","purple");
+		});
+$("li").mouseout(function(){ 
+			
+			$(this).css("background","yellow");
+		});
+		
+});
+
+	
+</script>
+
+
+
+</head>
+
+
+
+
+
+<body>
+<div class="menu" >
+<ul class="a1">메인메뉴1</ul>
+<li class="a1">서브메뉴1</li>
+<li class="a1">서브메뉴2</li>
+<li class="a1">서브메뉴3</li>
+
+
+<ul class="a2">메인메뉴2</ul>
+<li class="a2">서브메뉴1</li>
+<li class="a2">서브메뉴2</li>
+<li class="a2">서브메뉴3</li>
+
+
+<ul class="a3">메인메뉴3</ul>
+<li class="a3">서브메뉴1</li>
+<li class="a3">서브메뉴2</li>
+<li class="a3">서브메뉴3</li>
+
+</div>
+
+	
+	
+</body>
+</html>
+
+
+
+
+=============================================\
+
+클릭하면 나오는거
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="utf-8" >
+
+<title></title>
+
+<style>
+*{margin:0;padding:0;}
+
+ul{width:200px;padding:20px;background-color:pink;list-style:none;text-align:center;}
+li{background-color:yellow;padding:20px;list-style:none;width:200px;text-align:center;display:none;}
+
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+
+
+$(function(){
+
+		$("ul.a1").click(function(){
+	$("li.a1:not(:animated)").slideToggle();
+	});
+
+
+	
+		$("ul.a2").click(function(){
+	$("li.a2:not(:animated)").slideToggle();
+	});
+	
+		$("ul.a3").click(function(){
+	$("li.a3:not(:animated)").slideToggle();
+	});
+	
+	
+
+
+$("ul").mouseover(function(){ 
+			
+			
+			$(this).css("background","red");
+		});
+$("ul").mouseout(function(){ 
+			
+			$(this).css("background","pink");
+		});
+		
+$("li").mouseover(function(){ 
+			
+			
+			$(this).css("background","purple");
+		});
+$("li").mouseout(function(){ 
+			
+			$(this).css("background","yellow");
+		});
+		
+});
+
+	
+</script>
+
+
+
+</head>
+
+
+
+
+
+<body>
+<div class="menu" >
+<ul class="a1">메인메뉴1</ul>
+<li class="a1">서브메뉴1</li>
+<li class="a1">서브메뉴2</li>
+<li class="a1">서브메뉴3</li>
+
+
+<ul class="a2">메인메뉴2</ul>
+<li class="a2">서브메뉴1</li>
+<li class="a2">서브메뉴2</li>
+<li class="a2">서브메뉴3</li>
+
+
+<ul class="a3">메인메뉴3</ul>
+<li class="a3">서브메뉴1</li>
+<li class="a3">서브메뉴2</li>
+<li class="a3">서브메뉴3</li>
+
+</div>
+
+	
+	
+</body>
+</html>
+
+
+
+
+

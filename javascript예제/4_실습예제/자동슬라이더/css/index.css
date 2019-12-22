@@ -1,0 +1,50 @@
+@meta charset="utf-8";
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font:0.8em/1.4 'Nanum Gothic',sans-serif; min-width:1790px;}
+ul{list-style:none;}
+a{text-decoration:none; color:#666;}
+img{vertical-align:bottom;}
+h1,h2,h3,h4,h5{font-size:1em;}
+.wrap{width:100%;}
+
+
+.mom{width:60%; /*overflow:hidden*/;
+margin:0 auto; text-align:center;/* border:2px solid red;*/}
+.mom_1{width:25%; float:left; background: gray;/*border-right:1px solid blue*/;
+position:relative; top:0; left:0;}
+.mom_1:nth-child(4){border-right:0px;}
+.son{width:100%; background:pink;
+    position:absolute; top:100%; left:0%; display:none;}
+.son.on{display:block;}
+/*div.wrap>ul.mom>li.mom_1:hover>ul.son{display:block;}*/
+/*#toggle{display:none;}
+#toggle:checked ~div.wrap>ul.mom>label.right>li.mom_1>ul.son{display:block;}*/
+
+.container{
+    width:100%;
+    background:skyblue;
+    border: 1px solid red;
+    overflow:hidden;
+    /*text-align: center;*/
+    box-sizing: border-box;
+}
+.inner{
+    width:60%;
+    border:1px solid red;
+    overflow:hidden;
+    padding:20px;
+    margin: 0 auto;
+}
+
+.mom2{
+    width:20%;
+    float:left;
+    border: 1px solid red;
+}
+.ee{padding-left:20px;}
+.eee{padding-left:20px;}
+.eeee{padding-left:20px;}
+
+.ee{background:url(../img/put1.png)no-repeat 0px 20%;}
+.eee{background:url(../img/put2.png)no-repeat 0px 40%;}
+.eeee{background:url(../img/put3.png)no-repeat 0px 40%;}

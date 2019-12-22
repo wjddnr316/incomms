@@ -1,0 +1,31 @@
+<!doctype html0>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style></style>
+    </head>
+    <body>
+        <div id="remaining"></div>
+        <script type="text/javascript">
+            function datesUntilNewYear(){ //수행문 datesUntilNewYear수행
+                var now = new Date(); //오늘날짜를 now로 설정
+                var newYear = new Date((now.getFullYear() + 1), 0 , 1); //내년의 1월1일을 설정하기 위해 newYear에 now(오늘 연도 가져오기)+1 , 1월(0번인덱스), 1
+                var diff = newYear - now;
+                diff = diff / 1000;
+                var seconds = Math.floor(diff % 60);
+                diff = diff / 60;
+                var minutes = Math.floor(diff % 60);
+                diff = diff / 60;
+                var hours = Math.floor(diff % 24);
+                diff = diff / 24;
+                var days = Math.floor(diff);
+                var outStr = "내년 신정까지" + days + "일" + hours + "시간" + minutes + "분" + seconds + "초 남았습니다.";
+                
+                document.getElementById("remaining").innerHTML = outStr;
+                setTimeout("datesUntilNewYear()", 1000);
+            }
+            datesUntilNewYear();
+        </script>
+    </body>
+</html>

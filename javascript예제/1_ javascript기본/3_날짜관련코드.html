@@ -1,0 +1,35 @@
+<!doctype html0>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style></style>
+    </head>
+    <body>
+        <h1>getYear(), getFullYear(), getMonth(), getHours(), getMinutes(), getSeconds(), getMiliseconds(), toDateString(), toISOString(), toJSON(), toLocaleDateString(), toLocaleTimeString() toString(), toTimeString()</h1>
+        <script type="text/javascript">
+            //내장객체 DATE
+            var d1 = new Date();
+            document.write(d1.getYear() + 1900 + "<br>");
+            document.write(d1.getFullYear() +  "<br>");
+            document.write(d1.getMonth() + 1 +  "<br>"); //0~11까지라서 +1을 해야 지금 달이 나옴
+            document.write(d1.getDate()  +  "<br>"); 
+            document.write(d1.getHours() + "시간"+ "<br>"); 
+            document.write(d1.getMinutes()  +  "<br>"); 
+            document.write(d1.getSeconds()+  "<br>"); 
+            document.write(d1.getMilliseconds()  +  "<br>"); 
+            document.write("==============================<br>"); 
+            document.write(d1.toDateString() + "<br>"); 
+            document.write(d1.toISOString() + "<br>"); 
+            document.write(d1.toJSON() + "<br>"); 
+            document.write(d1.toLocaleDateString() + "<br>"); 
+            document.write(d1.toLocaleTimeString() + "<br>"); 
+            document.write(d1.toLocaleString() + "<br>"); 
+            document.write(d1.toString() + "<br>"); 
+            document.write(d1.toTimeString() + "<br>"); //세계기준시간
+            
+            document.write(d1.getFullYear()+"-"+(d1.getMonth()+1)+"-"+d1.getDate());
+           
+        </script>
+    </body>
+</html>

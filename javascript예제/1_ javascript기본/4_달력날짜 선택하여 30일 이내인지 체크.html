@@ -1,0 +1,37 @@
+<!doctype html0>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style></style>
+    </head>
+    <body>
+        구입날짜:
+        <input type="date" id="pdate">
+        <button onclick = "checkDate()">검사</button>
+        <script type="text/javascript">
+            function checkDate(){
+                var s = document.getElementById("pdate").value; //날짜선택하면 value값을 가져와라
+                document.write(s + "<br>");
+                var pdate = new Date(s); //특정한 날자/시간
+                var today = new Date(); //시스템상 오늘날짜/시간
+                document.write("오늘:"+today+"<br>");
+                document.write("선택한타임스템프" + pdate.getTime() + "<br>");
+                //getTime() 타임스템프 (time stamp, 밀리세컨드)
+                // 1970.1.1~ 현재까지의밀리세컨드
+                document.write("오늘의타임스탬프" + today.getTime() + "<br>");
+                var diff = today.getTime() - pdate.getTime();
+                document.write(diff + "<br>");
+                document.write(diff / (1000 * 60 * 60 * 24) + "<br>");//1000밀리세컨은 1초 *60초*60분*24시간 = 하루 
+                var days = Math.floor(diff / (1000 * 60 * 60 * 24 ));//floor() 버림함수 (소수이하 버려버림)
+                document.write("days:" + days);
+                if(days > 30){
+                    alert("30일 이내에만 교환 가능합니다");
+                }else{
+                    alert("교환 가능합니다");
+                }
+            }
+            
+        </script>
+    </body>
+</html>

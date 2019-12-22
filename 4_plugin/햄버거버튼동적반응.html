@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+/*사이드바 및 풀메뉴애니메이션*/
+
+input#menuicon{display: none;}
+label#menu_btn{display: block; width:45px; height:45px;  position:fixed; left:0; 
+top:0; transition:all .4s; cursor: pointer;}
+
+label#menu_btn span {
+    display: block;
+    background: #3e4221;
+    position: absolute;
+    width:50%;
+	margin-left:25%;
+    height: 2px;
+    border-radius: 30px;
+    transition:all .4s;}
+
+#menu_btn span:nth-child(1) {top:30%;}   
+#menu_btn span:nth-child(2) {top:50%; transform:translateY(-50%);}   
+#menu_btn span:nth-child(3) {bottom:30%;}   
+
+input#menuicon:checked ~#menu_btn{left:350px;}
+input#menuicon:checked ~#menu_btn>span:nth-child(1) {top:50%; transform:translateY(-50%) rotate(45deg);}
+input#menuicon:checked ~#menu_btn>span:nth-child(2) {opacity: 0;}
+input#menuicon:checked ~#menu_btn>span:nth-child(3) {bottom:50%; transform:translateY(50%) rotate(-45deg);}
+</style>
+</head>
+<body>
+<input type="checkbox" id="menuicon">
+<label for="menuicon" id="menu_btn">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+</body>
+
+</html>

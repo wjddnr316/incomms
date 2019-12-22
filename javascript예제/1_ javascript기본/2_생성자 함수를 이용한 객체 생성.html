@@ -1,0 +1,25 @@
+<!doctype html0>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>생성자 함수 이용한 객체 생성</title>
+        <style></style>
+    </head>
+    <body>
+        <div class="mycar"></div>
+        <script type="text/javascript">
+            function Car(model, speed, color){
+                this.model = model;
+                this.speed = speed;
+                this.color = color;
+                this.break = function (){ this.speed -= 10;};
+                this.accel = function (){ this.speed += 10;};
+            }
+            
+            var myCar = new Car("520d",60,"white");
+            myCar.color = "yellow";
+            myCar.break();
+            document.write(myCar.speed+myCar.color);
+        </script>
+    </body>
+</html>

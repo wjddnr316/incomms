@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="new 1.css">
+<style>
+</style>
+</head>
+    
+<body>
+
+  <div class="slider stick-dots">
+    <div class="slide">
+      <div class="slide__img">
+        <img src="" alt="" data-lazy="http://alexandrebuffet.fr/codepen/images/full/nature_01.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
+      <div class="slide__content">
+        <div class="slide__content--headings">
+           <h2 class="animated" data-animation-in="fadeInUp">Slide me to the moon</h2>
+           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.3">With awesome animations</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide__img">
+        <img src="" alt="" data-lazy="http://alexandrebuffet.fr/codepen/images/full/nature_02.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
+      <div class="slide__content">
+        <div class="slide__content--headings">
+           <h2 class="animated" data-animation-in="fadeInRight">Slide me to the moon</h2>
+           <p class="animated" data-animation-in="fadeInRight" data-delay-in="0.2">With awesome animations</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="slick/slick.js"></script>
+<script src="slick/slick-animation.js" type="text/javascript" charset="utf-8"></script>
+<script src="slick/slick-animation.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider').slick({
+          autoplay: true,
+          speed: 800,
+          lazyLoad: 'progressive',
+          arrows: false,
+          dots: true,
+      }).slickAnimation();
+    }); 
+</script>
+</body>
+</html>

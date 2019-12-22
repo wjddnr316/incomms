@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        var req = new XMLHttpRequest();//HTTP 요청을 만들 수 있는 새로운 객체를 생성하는 명령
+        req.open("GET","b.txt"); //http request method와 URL 설정
+        req.send();    
+        console.log(req.response);
+        //request의 경우에도 event handler가 있어야 작동이 됌.
+    </script>
+</head>
+
+<body>
+        <h1>AJAX란 브라우저에서 페이지를 이동하지 않고 자바스크립트를 통하여 HTTP Request를 보내고 그 응답을 받아 처리할 수 있는기술을 말한다 Asynchronous javascript and XML</h1>
+        <p>사용자에게 더 나은 사용 경험 제공, 대부분의 웹사이트에서 사용되고 있는 기술</p>
+</body>
+
+<footer>
+</footer>
+</html>

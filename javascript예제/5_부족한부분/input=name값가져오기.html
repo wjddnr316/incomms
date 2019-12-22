@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+            function checkEmail(){
+                var emailVal = $("input[name=email]").val();
+                var psVal = $("input[name=pas]").val();
+                alert(emailVal+psVal);
+                
+            }
+        </script>
+       
+    </head>
+    <body>
+        <input type="text" id="nameValue" name="email">
+        <input type="text" id="pasVal" name="pas" value="@naver.com">
+        <input type="button" onclick="checkEmail()" value="email확인">
+    </body>
+</html>

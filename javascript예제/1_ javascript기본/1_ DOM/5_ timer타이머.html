@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            
+        </style>
+        
+       
+    </head>
+    <body>
+        <p>버튼을 누르세요</p>
+        
+        <button onclick="showAlert()">타이머 시작</button>
+        <button onclick="stopAlert()">타이머 정지</button>
+        
+        <script type="text/javascript">
+        function test(){
+            console.log("함수호출");
+        }
+        var timer;
+        function showAlert(){
+            timer = setInterval("test()",1000);
+        }
+        function stopAlert(){
+            clearInterval(timer)
+        }
+            
+        </script>
+    </body>
+</html>

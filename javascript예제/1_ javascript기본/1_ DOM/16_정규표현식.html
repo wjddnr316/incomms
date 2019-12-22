@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        
+        <style>
+            h2{color:midnightblue;}
+            p{margin-left:100px; line-height:30px;}
+            strong{margin-left:-40px; font-size:1.2em; color:brown;}
+            table,th,td{border-collapse:collapse; border:1px solid blue; padding:20px;}
+            table{margin-left:60px; width:50%;}
+            th{width:50%;}
+        </style>
+        <script type="text/javascript">
+        </script>
+       
+    </head>
+    <body>
+        <h2>정규표현식:</h2>
+        <p><strong>1:확장문자(backsflash)</strong><br>
+            -s:공백문자(스페이스,탭,폼 피드,라인피드)<br>
+            -d:숫자<br>
+            -D:숫자가아닌 문자 [^0-9]와동일<br> <!--[^0-9]란 ^는 not 0-9가 아닌이란 뜻 -->
+            -w:알파벳,숫자,밑줄기호(_) [A-Za-Z0-9]<br><!--A부터Z a부터z 0부터 9까지-->
+            -W:의 반대문자 [^A-Za-z0-9]<br> <!--위에꺼에 반대 ^는 NOT이니간 -->
+            -특수문자: 특수문자 자체를 의미 예:+ (+기호 자체)<br>
+            <strong>2.특수문자</strong><br>
+            - * : 0회이상 반복<br>
+            - + : 1회 이상 반복<br>
+            - ? : 0 또는 1개의 문자 매칭<br>
+            - . : 정확히 1개 문자 매칭<br>
+            <strong>3.플래그</strong><br>
+            - g :전역매칭(매칭되는 모든 값을 찾음)<br>
+            - i : 대소문자 구분 없이<br>
+            - m : 여러 줄 매칭<br>
+            <strong>4.기타</strong><br>
+            - ():괄호로 묶인 패턴은 매칭된 다음, 그부분을 기억한다<br>
+            - | : ~또는~<br>
+            - {}:반복횟수<br>
+        </p>
+        <h2>정규표현식 표현</h2>
+        <table>
+            <tr>
+                <th>var re = /a/</th>
+                <td>a 가 있는 문자열</td>
+            </tr><tr>
+                <th>var re = /a/i</th>
+                <td>a가 있는 문자열, 대소문자 구분 안함</td>
+            </tr><tr>
+                <th>var re = /apple/</th>
+                <td>apple이 있는 문자열</td>
+            </tr><tr>
+                <th>var re = /[a-z]/</th>
+                <td>a~z사이의 모든 문자</td>
+            </tr><tr>
+                <th>/[a-zA-Z0-9]/</th>
+                <td>a~z,A~Z,0~9사이의 모든 문자</td>
+            </tr><tr>
+                <th>/[a-z]|[0-9]/</th>
+                <td>a~z또는 0~9사이 모든 문자</td>
+            </tr><tr>
+                <th>/a|b|c/</th>
+                <td>a 혹은 b 혹은 c인 문자</td>
+            </tr><tr>
+                <th>/[^a-z]</th>
+                <td>a~z까지의 문자가 아닌 문자 " ^는 not이란 뜻 "</td>
+            </tr><tr>
+                <th>/[a-z]$/</th> 
+                <td>문자가 a~z로 끝남 $는 끝날때 마지막</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            
+            
+        </style>
+        <script type="text/javascript">
+           function start(){
+               alert("로딩이 완료되었습니다");
+               document.body.style.backgroundColor="red";
+               document.body.firstElementChild.style.color ="white";
+           }
+           function aclick(){
+               document.body.style.backgroundColor="black";
+           }
+        </script>
+       
+    </head>
+    <body onload="start()">
+        <a href="#" onclick="aclick()">다음으로이동</a>
+    </body>
+</html>

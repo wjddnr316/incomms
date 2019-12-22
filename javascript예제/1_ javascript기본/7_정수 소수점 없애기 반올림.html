@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style></style>
+    </head>
+    <body>
+        <div id="clock"></div>
+        <script type="text/javascript">
+            count1 = new Number(1.237);
+            count2 = 1.233;
+            
+            document.write(typeof(count1)+":"+count1+"<br>");
+            document.write(typeof(count2)+":"+count2+"<br>");
+            document.write(Math.round(count1) + "<br>");
+            document.write(Math.round(count2) + "<br>");
+            //math.round()정수만 리턴
+            document.write(count1.toFixed(2) + "<br>");
+            document.write(count2.toFixed(2) + "<br>");
+             //실수 .toFixed(소수이하자리수) 반올림
+            if(count1.toFixed(2) == count2.toFixed(2)){
+                alert("소수 2째 자리까지 같습니다");
+            }else{
+                alert("같지 않습니다");
+            }
+            
+        </script>
+    </body>
+</html>

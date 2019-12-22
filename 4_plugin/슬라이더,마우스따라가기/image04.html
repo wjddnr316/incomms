@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider4 : 버튼과 닷 메뉴 이미지 슬라이드 구현</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+		* {margin: 0; padding: 0;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+        body {background: #333;}
+        h2 {color: #2EDF19; font-family: 'Lato'; font-weight: 300; padding: 20px;}
+        
+        .slide_wrap {position: relative;}
+        
+        .slide_show {position: relative; width: 100%; height: 450px; overflow: hidden; left: 50%; transform: translateX(-50%)}
+        .slide_show .slide_img {width: 100%; height: 100%; position: absolute; left: 0; top: 0;  }
+        .slide_show .slide_img > div {width: 100%; height: 100%; position: absolute; top: 0;}
+		.slide_show .slide_img > div img {width: 100%;}
+        
+        .slide_btn a {
+            position: absolute; top: 50%; 
+            transform: translateY(-50%); width: 60px; height: 60px; 
+            border-radius: 50%; background-color: #000; text-align: center; 
+            line-height: 60px; text-decoration: none; color:#fff; 
+            transition: all 0.3s ease;
+            font-size: 24px;
+        }
+        .slide_btn a.prev {left: 10px;}
+        .slide_btn a.next {right: 10px;}
+        .slide_btn a.disabled {display: none;}
+        
+        .slide_dot {text-align: center; margin-top: 10px;}
+		.slide_dot a {width: 20px; height: 20px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block; margin: 6px;}
+		.slide_dot a.active {background: rgba(255,255,255,1);}
+	</style>
+</head>
+<body>
+    <h2>Image Slider4 : 버튼과 닷 메뉴 이미지 슬라이드 구현</h2>
+    
+    <div class="slide_wrap">
+        <div class="slide_show">
+            <div class="slide_img">
+                <div><img src="https://tistory1.daumcdn.net/tistory/2818477/skin/images/ban01.jpg" alt=""></div>
+                <div><img src="https://tistory1.daumcdn.net/tistory/2818477/skin/images/ban02.jpg" alt=""></div>
+                <div><img src="https://tistory1.daumcdn.net/tistory/2818477/skin/images/ban03.jpg" alt=""></div>
+                <div><img src="https://tistory1.daumcdn.net/tistory/2818477/skin/images/ban04.jpg" alt=""></div>
+                <div><img src="https://tistory1.daumcdn.net/tistory/2818477/skin/images/ban05.jpg" alt=""></div>
+            </div>
+        </div>
+        
+        <div class="slide_btn">
+            <a href="#" class="prev"><i class="fa fa-angle-left"></i></a>
+            <a href="#" class="next"><i class="fa fa-angle-right"></i></a>
+        </div>
+        <div class="slide_dot"></div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        var container = $(".slide_wrap");
+        var slideShow = container.find(".slide_show");
+        var slideImg = slideShow.find(".slide_img");
+        var slides = slideImg.find(">div");
+        var slideBtn = container.find(".slide_btn");
+        var slideDot = container.find(".slide_dot");
+        
+        var slideCount = slides.length;
+        var currentIndex = 0;
+        var dot = "";
+        
+        //각 이미지 위치 잡기
+        slides.each(function(i){
+            $(this).css({ left : 100 * i +'%' });
+            //indicator += "<a href='#'>"+ (i+1) + "</a>"
+            dot += "<a href='#'></a>"
+        });
+        
+        //닷 이미지 갯수만큼 표시
+        slideDot.html(dot);
+        
+        //이미지 움직이기
+        function gotoSlide(index) {
+            slideImg.animate({ left: -100 * index+'%' },300);
+            // -1 == 100%(오른쪽으로)
+            // 0  == 0%
+            // 1 ==- -100%(왼쪽으로)
+            currentIndex = index;
+            updateNav();
+        }
+        
+        //버튼 활성화/비활성화하기
+        function updateNav() {
+            var btnPrev = slideBtn.find(".prev");
+            var btnNext = slideBtn.find(".next");
+            
+            //첫번째 이미지 - 왼쪽 버튼 사라지게
+            if(currentIndex === 0){
+                btnPrev.addClass("disabled");
+            } else {
+                btnPrev.removeClass("disabled");
+            }
+            //마지막 이미지-오른쪽 버튼 사라지게
+            if(currentIndex === slideCount -1 ){
+                btnNext.addClass("disabled");
+            } else {
+                btnNext.removeClass("disabled");
+            }
+            //활성화된 이미지한테 닷 활성화 표시
+            slideDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+        }
+        
+        //왼쪽 오른쪽 버튼 클릭하기
+        slideBtn.on("click","a",function(){
+            if( $(this).hasClass("prev") ){
+                //왼쪽 버튼을 클릭했을때 
+                gotoSlide(currentIndex - 1);
+            } else {
+                //오른쪽 버튼을 클릭했을 때
+                gotoSlide(currentIndex + 1);
+            }
+        });
+        
+        //첫 번째 이미지 슬라이드 활성화
+        gotoSlide(currentIndex);
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

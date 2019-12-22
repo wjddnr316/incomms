@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+        a:hover{background:pink;}
+    </style>
+  </head>
+
+  <body>
+      <h1>Number guessing game</h1>
+
+      <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or less. We'll tell you if your guess was too high or too low.</p>
+
+<div class="form">
+  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+  <input type="submit" value="Submit guess" class="guessSubmit">
+</div>
+
+<div class="resultParas">
+  <p class="guesses"></p>
+  <p class="lastResult"></p>
+  <p class="lowOrHi"></p>
+</div>
+<h2><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors">js에러 코드 해석링크</a></h2>
+<h2><a href="https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_went_wrong" style="color:red;">본 예제 원본 사이트 링크</a></h2>
+</body>
+
+<script>
+  var randomNumber = Math.floor(Math.random() * 100) + 1; 
+    //random()은 0과 1사이의 수 중에 렌덤으로 측정되기 때문에 x100을 해서 1~100사이의 수로 정해야한다.
+    console.log(randomNumber);
+  var guesses = document.querySelector('.guesses');
+  var lastResult = document.querySelector('.lastResult');
+  var lowOrHi = document.querySelector('.lowOrHi'); 
+    console.log(lowOrHi);
+    //querySelector에서 css선택자와 동일하게 .을붙여줘야함
+  var guessSubmit = document.querySelector('.guessSubmit');
+  var guessField = document.querySelector('.guessField');
+  var guessCount = 1;
+  var resetButton;
+  function checkGuess() {
+ 
+    var userGuess = Number(guessField.value);
+    if(guessCount === 1) {
+      guesses.textContent = 'Previous guesses: ';
+    }
+    guesses.textContent += userGuess + ' ';
+ 
+    if(userGuess === randomNumber) {
+      lastResult.textContent = 'Congratulations! You got it right!';
+      lastResult.style.backgroundColor = 'green';
+      lowOrHi.textContent = '';
+      setGameOver();
+    } else if(guessCount === 10) {
+      lastResult.textContent = '!!!GAME OVER!!!';
+      setGameOver();
+    } else {
+      lastResult.textContent = 'Wrong!';
+      lastResult.style.backgroundColor = 'red';
+      if(userGuess < randomNumber) {
+        lowOrHi.textContent = 'Last guess was too low!';
+      } else if(userGuess > randomNumber) {
+        lowOrHi.textContent = 'Last guess was too high!';
+      }
+    }
+ 
+    guessCount++;
+    guessField.value = '';
+    guessField.focus();
+  }
+  guessSubmit.addEventListener('click', checkGuess); //addEventListener 인데 e가 소문자
+  
+  function setGameOver() {
+	  guessField.disabled = true;
+	  guessSubmit.disabled = true;
+	  resetButton = document.createElement('button');
+	  resetButton.textContent = 'Start new game';
+	  document.body.appendChild(resetButton);
+	  resetButton.addEventListener('click', resetGame); //위와 동일하게 Event가 돼어야함
+  }
+  
+  function resetGame() {
+	  guessCount = 1;
+	
+	  var resetParas = document.querySelectorAll('.resultParas p');
+	  for(var i = 0; i < resetParas.length; i++) {
+		  resetParas[i].textContent = '';
+	  }
+	  resetButton.parentNode.removeChild(resetButton);
+	
+	  guessField.disabled = false;
+	  guessSubmit.disabled = false;
+	  guessField.value = '';
+	  guessField.focus();
+	
+	  lastResult.style.backgroundColor = 'white';
+	
+	  randomNumber = Math.floor(Math.random() * 100) + 1;
+      //random()은 0과 1사이의 수 중에 렌덤으로 측정되기 때문에 x100을 해서 1~100사이의 수로 정해야한다.
+      console.log(randomNumber);
+  }
+</script>
+</html>

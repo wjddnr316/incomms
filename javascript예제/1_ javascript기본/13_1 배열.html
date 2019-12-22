@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>배열</title>
+        <style></style>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            function printArray(a){
+                document.write("<h1>배열</h1>");
+                for(var i = 0; i<a.length; i++){
+                    document.write(i+"번인덱스 : "+a[i] +"<br>");
+                }
+                document.write("<br>");
+            }
+            var myArray0 = new Array;
+            myArray0[0] = "사과";
+            myArray0[1] = "바나나";
+            myArray0[2] = "오렌지";
+            
+            var myArray1 = ["사과","바나나","오렌지"];
+            var myArray2 = new Array("사과","바나나","오렌지");
+            
+            
+            /*document.write(myArray0+"<br>");
+            document.write(myArray0[0]+"<br>");
+            document.write(myArray0[1]+"<br>");
+            document.write(myArray0[2]+"<br>");
+            document.write(myArray1+"<br>");
+            document.write(myArray2+"<br>");*/
+            
+            printArray(myArray0); //myArray0이 a가 되므로 그 안에있는 문자열들이 적용되어 노출
+            printArray(myArray1);
+            printArray(myArray2);
+        </script>
+    </body>
+</html>

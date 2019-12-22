@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <style>
+        .character{color:black;}
+        .word{color:gray;}
+    </style>
+    
+</head>
+
+<body>
+   <p onclick="eventHandler();">Javascript debugger</p>
+    <p>F12 개발자 도구에서 source 텝을 선택하고  자바스크립 실행파일을 클릭하여 원하는 수행문의 실행을 관찰 할 수있다. 행 번호를 클릭하면 그 전까지만 실행되고 resume 버튼을 클릭하면 다시 원래대로 실행한다.</p>
+    <p>되감기 처럼 생긴 step over을 클릭하면 다음 function 으로 넘어가고 step in to 는 안에있는 수행으로 이동 </p>
+    <p>watch를 누루고 +선택후 변수의 현재 값을 확인 가능하다</p>    
+<script type="text/javascript">
+        function eventHandler(){
+            console.log("eventHandler");
+            function innerFunction(){
+                console.log("innerFunction")
+            }
+            for (var i = 0 ; i < 2 ; i++){
+                innerFunction();
+            } 
+        }
+</script>
+</body>
+
+<footer>
+</footer>
+</html>

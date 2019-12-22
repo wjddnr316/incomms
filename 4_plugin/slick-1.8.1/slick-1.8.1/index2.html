@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slick Playground</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+  <style type="text/css">
+    html, body {
+	background:#666;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+	#story_section{width:100%;}
+article.im_story_part{width:100%;}
+div.story_background{width:100%;  background:url('../img/index/story_background2.png') no-repeat center bottom; background-size:cover; margin-top: 125px; }
+	div.wrap{width:75%; height:800px; margin:100px auto; border:1px solid red; overflow:hidden;}
+    .slider {
+		border:1px solid blue;
+        width: 100%;	
+		height:500px;
+		
+    }
+	.slider>div{width:130%; margin:0; padding:0; margin-left:-15%;}
+	p.im_title{opacity:0;}
+	
+    .slick-slide {
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		transform: scale(0.8);
+		margin: 0px 20px;
+		transition: all ease-in-out .3s;
+		opacity: .2;
+	
+    }
+	
+    .slick-slide img {
+		width: 100%; 
+		transition:all 1s ease;
+    }
+	
+	.slick-active {
+		opacity: .5;
+    }
+
+    .slick-current {
+		opacity: 1;
+    }
+	
+	.slick-prev{left:24.5%; top:30%;	z-index:100;}
+	.slick-next{right:24.5%; top:30%; }
+	
+	.slick-prev:before{
+		background-image: url(left_allow.png);
+		background-size: 20px 30px;
+		display: inline-block;
+		width: 20px; 
+		height: 30px;
+		content:"";
+	}
+	
+	.slick-next:before {
+		background-image: url(right_allow.png);
+		background-size: 20px 30px;
+		display: inline-block;
+		width: 20px; 
+		height: 30px;
+		content:"";
+	}
+
+	.slick-center {
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+
+	.slick-dots li button:before {
+		color: #000;
+		top:100%;}
+	.slick-dots li.slick-active button:before {
+		color:green;}
+		
+		
+		
+		
+div.circle{width:70px; height:70px; border:1px solid #fff; border-radius:50%; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); opacity:0; visibility:hidden;}
+
+div.circle>p{color:#fff; font-size:0.8em; margin-top:10px;}
+
+div.line-wrap{width:70px; height:70px; position:relative; left:0; top:0; }
+
+span.line{display:block;width:30px; height:1px; background:#fff; position:absolute;left:50%; top:50%;transform:translate(-50%,-50%); }
+
+span.line2{display:block;width:1px; height:30px; background:#fff; position:absolute; }
+
+.slick-center>div:hover div.circle{opacity:1; visibility:visible ;transition:0.2s ease;}
+
+.slick-center>div:hover div.line-wrap{ transform:rotate(360deg); transition:1s ease-in-out;} 
+
+.slick-center>div:hover img{opacity:0.6; transform:scale(1.1); transition:1s ease;}
+
+.slick-center p.im_title{opacity:1;}
+.slick-center div.imagebox{width:100%; overflow:hidden; border:1px solid blue;}
+  </style>
+</head>
+<body>
+<section id="story_section">
+<article class="im_story_part">
+<div class="story_background">
+<div class="wrap">
+  <section class="center slider">
+    <div>
+		<div class="imagebox">
+			<img src="story1_1.jpg" alt=""/>
+		</div>
+		<div class="circle">
+			<div class="line-wrap">
+				<span class="line1 line"></span>
+				<span class="line2 line"></span>
+			</div>
+			<p>자세히보기</p>
+		</div>	  
+		<p class="im_title">안녕하세요</p>
+    </div>
+    <div>
+		<div class="imagebox">
+		  <img src="story2.jpg"  alt=""/>
+		  <div class="circle">
+				<div class="line-wrap">
+					<span class="line1 line"></span>
+					<span class="line2 line"></span>
+				</div>
+				<p>자세히보기</p>
+			</div>	 
+			<p class="im_title">안녕하세요</p>
+		</div>
+    </div>
+	<div>
+	<div class="imagebox">
+      <img src="story3.jpg" alt=""/>
+	  </div>
+	  <div class="circle">
+			<div class="line-wrap">
+				<span class="line1 line"></span>
+				<span class="line2 line"></span>
+			</div>
+			<p>자세히보기</p>
+		</div>	
+		<p class="im_title">안녕하세요</p>
+    </div>
+    <div>
+	<div class="imagebox">
+      <img src="story4.jpg" alt=""/ >
+	  </div>
+	  <div class="circle">
+			<div class="line-wrap">
+				<span class="line1 line"></span>
+				<span class="line2 line"></span>
+			</div>
+			<p>자세히보기</p>
+		</div>	  
+		<p class="im_title">안녕하세요</p>
+    </div>
+    <div>
+	<div class="imagebox">
+      <img src="story2.jpg" alt=""/ >
+	  </div>
+	  <div class="circle">
+			<div class="line-wrap">
+				<span class="line1 line"></span>
+				<span class="line2 line"></span>
+			</div>
+			<p>자세히보기</p>
+		</div>	  
+		<p class="im_title">안녕하세요</p>
+    </div>
+    <div>
+	<div class="imagebox">
+      <img src="story3.jpg" alt=""/ >
+	  </div>
+	  <div class="circle">
+			<div class="line-wrap">
+				<span class="line1 line"></span>
+				<span class="line2 line"></span>
+			</div>
+			<p>자세히보기</p>
+		</div>
+		<p class="im_title">안녕하세요</p>		
+    </div>
+    <div>
+	<div class="imagebox">
+      <img src="story4.jpg" alt=""/ >
+	  </div>
+	  <div class="circle">
+			<div class="line-wrap">
+				<span class="line1 line"></span>
+				<span class="line2 line"></span>
+			</div>
+			<p>자세히보기</p>
+		</div>
+		<p class="im_title">안녕하세요</p>
+    </div>
+    <div>
+	<div class="imagebox">
+      <img src="story2.jpg" alt=""/ >
+	  </div>
+	  <div class="circle">
+			<div class="line-wrap">
+				<span class="line1 line"></span>
+				<span class="line2 line"></span>
+			</div>
+			<p>자세히보기</p>
+		</div>	  
+		<p class="im_title">안녕하세요</p>
+    </div>
+    <div>
+		<div class="imagebox">
+			<img src="story3.jpg" alt=""/ >
+		</div>
+		<div class="circle">
+			<div class="line-wrap">
+				<span class="line1 line"></span>
+				<span class="line2 line"></span>
+			</div>
+			<p>자세히보기</p>
+		</div>	  
+		<p class="im_title">안녕하세요</p>
+    </div>
+  </section>
+</div>
+
+</div>
+</article>
+</section>
+ 
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+ $(document).on('ready', function() {
+	$('.center').slick({
+	  centerMode: false,
+	  dots: true,
+	  centerPadding: '0',
+	  slidesToShow: 2,
+	  speed:1200,
+
+});
+
+});
+
+     
+</script>
+
+
+
+</body>
+</html>

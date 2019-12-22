@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+        </style>
+        
+       
+    </head>
+    <body>
+        <ul>
+            <li><span>아이템1-1</span><span>아이템1-2</span></li>
+            <li>아이템2</li>
+            <li>아이템3</li>
+            <li>아이템4</li>
+            <li>아이템5</li>
+        </ul>
+        
+        
+        <script type="text/javascript">
+            var list = document.getElementsByTagName("ul")[0];//첫번째태그
+            var allItems = list.getElementsByTagName("li");
+            //ul태그내의 모든 li 태그들을 선택 (배열로 저장)
+            for(i=0; i<allItems.length; i++){
+                console.log(allItems[i].firstChild);
+                //firstChild첫번째 자식 태그> 태그.data 태그의 내용
+            }
+        </script>
+        
+    </body>
+</html>

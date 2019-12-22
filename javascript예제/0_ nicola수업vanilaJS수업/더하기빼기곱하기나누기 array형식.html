@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>아코디언메뉴.js</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	
+	
+
+<style type="text/css">
+*{margin:0; padding:0; box-sizing:border-box;}
+ul li{list-style:none;}
+ 
+</style>
+    
+</head>
+<body>
+   
+    <script type="text/javascript">
+         const calculator = {
+            plus: function(a,b){
+                return a+b;
+            },
+            minus: function(a,b){
+                return a-b;
+            },
+            gop: function(a,b){
+                return a*b;
+            },
+            nanum: function(a,b){
+                return a/b;
+            }
+        }
+        const plus = calculator.plus(5,5);
+        const minus = calculator.minus(5,5);
+        const gop = calculator.gop(5,5);
+        const nanum = calculator.nanum(5,5);
+        console.log(plus,minus,gop,nanum);
+	</script>
+</body>
+</html>

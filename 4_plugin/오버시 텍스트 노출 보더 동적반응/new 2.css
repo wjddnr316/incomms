@@ -1,0 +1,105 @@
+
+body{ height:100%; background:#000;}
+div.pg_article_wrap{width:70%; height:100%;}
+.arti_box {
+  position: relative;
+  width: 32.666%;
+  height:90%; 
+  color: #ffffff;
+  text-align: left;
+  background-color: #000000;
+  font-size: 16px;
+}
+.arti_box * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+.arti_box img {
+  position: relative;
+  max-width: 100%;
+  vertical-align: top;
+}
+.arti_box .arti_text_box {
+  position: absolute;
+  text-align:center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 30px;
+}
+
+/*동적반응시작*/
+.arti_box .arti_text_box:before,
+.arti_box .arti_text_box:after {
+  width: 5px;
+  height: 0;
+}
+.arti_box .arti_text_box:before {
+  right: 0;
+  top: 5px;
+}
+.arti_box .arti_text_box:after {
+  left: 0;
+  bottom:5px;
+}
+
+.arti_box a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.arti_box:before,
+.arti_box:after,
+.arti_box .arti_text_box:before,
+.arti_box .arti_text_box:after {
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+  z-index: 1;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 1;
+}
+.arti_box:before,
+.arti_box:after {
+  height: 5px;
+  width: 0%;
+}
+.arti_box:before {
+  top: 0;
+  left: 5px;
+}
+.arti_box:after {
+  bottom: 0;
+  right: 5px;
+}
+.arti_box:hover img{
+  opacity: 0.5;
+}
+.arti_box:hover .arti_text_box
+{
+  opacity: 1;
+}
+.arti_box:hover .arti_text_box:before,
+.arti_box:hover .arti_text_box:after {
+  height:calc( 100% - 5px) ;
+}
+.arti_box:hover:before,
+.arti_box:hover:after {
+  width:calc(100% - 5px) ;
+}
+.arti_box:hover:before,
+.arti_box:hover:after,
+.arti_box:hover .arti_text_box:before,
+.arti_box:hover .arti_text_box:after
+ {
+  opacity: .8;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            div,a,input{margin:20px;}
+            #ex{
+                background-color:blue;
+                font-size:50px;
+            }
+        </style>
+        
+       
+    </head>
+    <body>
+        <div id="ex">div영역</div>
+        <a href="#" onclick="get()">div의 내용</a>
+        <a href="#" onclick="set('변경되었습니다')">div 변경</a>
+        <img id="image" src="img/k892534784_1.jpg">
+        <input type="button" value="이미지 변경" onclick="changeImage()">
+        <input type="button" value="이미지 숨김" onclick="hide()">
+        <input type="button" value="이미지표시" onclick="show()">
+        <input type="button" value="글자스타일 변경" onclick="changeStyle()">
+        
+        
+        <script type="text/javascript">
+            function get(){
+                var val=document.getElementById("ex").innerHTML;
+                alert(val);
+            }
+            function set(v){
+                document.getElementById("ex").innerHTML = v;
+            }
+            function changeImage(){
+                var img = document.getElementById("image");
+                img.src = "img/k062534177_1.jpg";
+                img.style.width="50px";
+                img.style.height="50px";
+            }
+            function hide(){
+                document.getElementById("image").style.visibility = "hidden";
+            }
+            function show(){
+                document.getElementById("image").style.visibility = "visible";
+            }
+            function changeStyle(){
+                var ex = document.getElementById("ex");
+                ex.style.color = "red";
+                ex.style.backgroundColor = "yellow";
+                ex.style.fontSize="30px";
+                ex.style.fontStyle="italic";
+                ex.style.fontWeight="bold";
+            }
+        </script>
+        
+    </body>
+</html>

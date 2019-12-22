@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+</html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>element</title>
+        <style>
+            *{margin:0; padding:0;}
+            body{font:12px/1.5 dotum,"돋움", sans-serif;}
+            li{list-style:none;}
+            table{width:600px; border-collapse:collapse; border-spacing:0;}
+            h1{text-align:center;}
+            #carZone{width:600px; margin:0 auto;}
+            #estimate th, td{border:1px solid #ccc; height:30px;}
+            #estimate th{background:#ddd;}
+            #estimate td{text-align:center;}
+            tfoot{font-size:15px; font-weight:700;}
+            input{text-align:right;  font-size:15px; font-weight:700;}
+            h1{border:1px solid red;}
+            p{width:600px;}
+            img{width:100%;}
+            
+            
+        </style>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+           function car(){
+               var carPrice = Number(document.getElementById("total").defaultValue);
+               for(var i = 1; i <= 3; i++){
+                   var carOpt = document.getElementById("opt"+i);
+                    if(carOpt.checked){
+                        carPrice += Number(carOpt.value);
+                    }
+               }
+                document.getElementById("total").value = carPrice;
+           }
+            
+            function checkEmail(){
+                var emailVal = $('input[name=email]').val();
+                console.log(emailVal);
+            }
+        </script>
+       
+    </head>
+    <body>
+        <h1>자동차견적</h1>
+        <div id="carZone">
+            <p>
+                <img src="img/k062534177_1.jpg" alt="책">
+            </p>
+            <table id="estimate">
+                <colgroup>
+                    <col width="380px">
+                    <col width="170px">
+                    <col width="*">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>옵션</th>
+                        <th>추가가격</th>
+                        <th>선택</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label for="opt1">인조가죽시트</label></td>
+                        <td>310000</td>
+                        <td><input type="checkbox" name="opt1" id="opt1" value="250000" onclick="car()"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="opt2">내비게이션</label></td>
+                        <td>250000</td>
+                        <td><input type="checkbox" name="opt2" id="opt2" value="250000" onclick="car()"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="opt3">선루프</label></td>
+                        <td>590000</td>
+                        <td><input type="checkbox" name="opt3" id="opt3" value="250000" onclick="car()"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>차량가격</th>
+                        <td colspan="2"><input type="text" name="total" id="total" value="134500000" readonly="readonly"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <h2>안녕</h2>
+        <input type="text" id="emailVal" name="email">
+        <input type="button" onclick="checkEmail()" value="확인">
+    </body>
+</html>

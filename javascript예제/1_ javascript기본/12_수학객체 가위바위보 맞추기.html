@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>수학객체 가위바위보맞추기</title>
+        <style></style>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            document.write("<h1>가위바위보 맞추기</h1>");
+            var t = prompt("가위바위보 맞추기","가위");
+            var tNum;
+            switch(t){
+                case "가위":
+                    tnum = 1;
+                    break;
+                case "바위":
+                    tnum = 2;
+                    break;
+                case "보":
+                    tnum = 3;
+                    break;
+                default:
+                    alert("잘못입력하셨습니다");
+                    location.reload();
+            }
+            var com = Math.ceil(Math.random() * 3); //컴퓨터 가위1바위2보3
+            document.write("<img src='img/math_img_" + com +".png' alt='가위,바위,보'>");
+            
+            if (tNum == com) {
+                alert("맞았습니다!");
+            }else{
+                alert("틀렸습니다");
+            }
+        </script>
+    </body>
+</html>

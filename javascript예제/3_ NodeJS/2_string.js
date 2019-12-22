@@ -1,0 +1,1 @@
+console.log('안ㄴ아미자링나리히ㅓㄱ다ㅓ삼저ㅣㅏㅓㅏㅣㅁㄷㅈ가ㅣdwejkarfjeawkltgjkajtgfkajgti jiae3jtioajtioawjitjaiwotjioj iojaiwjriojirfjioaRFJiojioarjioajio'.length);

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>배열(이미지까지 변경됨)</title>
+        <style></style>
+    </head>
+    <body>
+        <h1></h1>
+        <script type="text/javascript">
+            now = new Date();
+            day = now.getDay(); //요일 (일요일:0~ 토요일:6)
+            
+            yoil = new Array("일","월","화","수","목","금","토");
+            var today = yoil[day];
+            
+            imgYoil = new Array ("sun.gif","mon.gif","tue.gif","wed.gif","thu.gif","fri.gif","sat.gif");
+            
+            document.write("요일코드:" + day + "<br>");
+            document.write("오늘은 "+today+"요일입니다<br>")
+            document.write("<h1>오늘은 <img src='img/" + imgYoil[day]+"'>요일입니다.</h1><br>") //일~토요일 출력
+            
+            for(var i = 0; i < imgYoil.length; i ++){
+                document.write(yoil[i] + "요일" + "<img src='img/" + imgYoil[i] + "'><br>");
+            }
+            
+        </script>
+    </body>
+</html>

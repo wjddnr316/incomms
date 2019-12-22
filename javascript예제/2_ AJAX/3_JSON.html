@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <h1>자바스크립트의 객체를 문자열로 표현하는 방법 JSON=javascript object notation</h1>
+    <p>var pi = 3.14</p>
+    <p>var str = "string"</p>
+    <p>JSON.stringify(pi)</p>
+    <p>JSON.stringify(str)</p>
+    <p>JSON.parse("3.14")</p>
+    <p>JSON.parse("\"string\"")</p>
+    <p>var arr=["문자열", 3.14, true, null, undefined, function a(){console.log("method")}]</p>
+    <p>var t = JSON.stringify(arr)</p>
+    <p>JSON.parse(t)</p>
+    <p>var obj = {"str":"문자열", "num":3.14, "boolen":true, "null":null, "undefined":undefined, "method":function a(){console.log("method")}}</p>
+    <p>var t2 = JSON.stringify(obj)</p>
+    <p>JSON.parse(t2)</p>
+    <h2>JSON.stringify(object)=JSON문자열로 반환하기</h2>
+    <h2>JSON.parse(string)=JSON문자열을 JAVASCRIPT OBJECT로 반환하기 단 undefined랑 function은 반환안됨.</h2>
+</body>
+
+<footer>
+</footer>
+</html>

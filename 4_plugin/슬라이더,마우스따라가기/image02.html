@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider2 : 버튼을 이용하여 이미지 슬라이드 구현</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+		* {margin: 0; padding: 0;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+        body {background: #333;}
+        h2 {color: #2EDF19; font-family: 'Lato'; font-weight: 300; padding: 20px;}
+        
+        .slide_wrap { }
+        .slide_show {
+            width: 600px; height: 450px; overflow: hidden; 
+            position: absolute; left: 50%; top: 50%; 
+            transform: translate(-50%,-50%);
+            box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
+        }
+        .slide_show .slide_img {position: absolute; left: 0; top: 0; width: 3000px; height: 450px; overflow: hidden; }
+        .slide_show .slide_img > div {float: left; width: 600px; height: 400px; }
+		.slide_show .slide_img > div img {width: 100%; }
+        
+        .slide_btn a {
+            position: absolute; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            width: 60px; height: 60px; border-radius: 50%; background-color: #000; 
+            text-align: center; 
+            line-height: 60px; 
+            text-decoration: none; 
+            color:#fff; 
+            transition: all 0.3s ease;
+            font-size: 24px;
+        }
+        .slide_btn a.prev {left: 10px;}
+        .slide_btn a.next {right: 10px;}
+	</style>
+</head>
+<body>
+    <h2>Image Slider2 : 버튼을 이용하여 이미지 슬라이드 구현</h2>
+    
+    <div class="slide_wrap">
+        <div class="slide_show">
+            <div class="slide_img">
+                <div><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover01.jpg" alt=""></div>
+                <div><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover02.jpg" alt=""></div>
+                <div><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover03.jpg" alt=""></div>
+                <div><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt=""></div>
+                <div><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt=""></div>
+            </div>
+        </div>
+        
+        <div class="slide_btn">
+            <a href="#" class="prev"><i class="fa fa-angle-left"></i></a>
+            <a href="#" class="next"><i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        var container = $(".slide_wrap");
+        var slideShow = container.find(".slide_show");
+        var slideImg = slideShow.find(".slide_img");
+        var slides = slideImg.find(">div");
+        var slideBtn = container.find(".slide_btn");
+        
+        var slideCount = slides.length;
+        var currentIndex = 0;
+
+        //이미지 움직이기
+        function back() {
+            if(0 < currentIndex){
+                slideImg.animate({left:'+=600px'},300);
+                currentIndex--;
+            }
+        }
+        function next() {
+            if(slideCount-1 > currentIndex){
+                slideImg.animate({left:'-=600px'},300);
+                currentIndex++;
+            }
+        }
+        
+        //왼쪽 오른쪽 버튼 클릭하기
+        slideBtn.on("click","a",function(){
+            if( $(this).hasClass("prev") ){
+                //왼쪽 버튼을 클릭했을때 
+                back();
+            } else {
+                //오른쪽 버튼을 클릭했을 때
+                next();
+            }
+        });
+    </script>
+</body>
+</html>

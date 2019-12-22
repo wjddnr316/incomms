@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>배열 정렬</title>
+        <style></style>
+    </head>
+    <body>
+        <h1>sort의특성상 문자열 기준으로 정렬 시키기 때문에<br> 
+        숫자크기별로 인식 시키려면 function(a,b){return a-b;} 를넣어야한다 내림차의 경우 return b-a 를 하면됨</h1>
+        <script type="text/javascript">
+            var myArray = [10,30,20,500,300,700];
+            
+            myArray.sort(function(a,b){return a-b;});
+            document.write(myArray+"<br>");
+            
+            myArray.sort(function(a,b){return b-a;});
+            document.write(myArray);
+        </script>
+    </body>
+</html>

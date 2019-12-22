@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <form method="GET" action="b.html" id="form1">
+        이름:<input type="text" name="id"><br>
+        메세지<input type="text" name="msg"><br>
+        <input type="submit">
+    </form>
+    <script type="text/javascript">
+        var t = document.getElementById("form1");
+        
+        t.onsubmit = function a(){
+            console.log("form property");
+            return false;
+        }
+        function b(){
+            console.log("form addEventListener");
+            return false;
+        }
+        function c(){
+            console.log("form addEventListener-2");
+            return false;
+        }
+        t.addEventListener("submit", b);
+        t.addEventListener("submit", c);
+        //addEventListener는 전에것에 덮어쓰지 않는것이 특징 (중첩)
+        //t.removeEventListener("submit", b); 삭제
+    </script>
+</body>
+
+<footer>
+</footer>
+</html>

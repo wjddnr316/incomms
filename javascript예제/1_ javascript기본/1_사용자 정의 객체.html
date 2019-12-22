@@ -1,0 +1,26 @@
+<!doctype html0>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style></style>
+    </head>
+    <body>
+        <div class="mycar"></div>
+        <script type="text/javascript">
+            var myCar = {
+                model:"520d",
+                color:"red",
+                speed:30,
+                accel: function(){this.speed+=10},
+                break: function(){this.speed-=10}
+            }
+            
+            myCar.accel();
+            
+            document.write(myCar.speed); //값 노출
+            
+            
+        </script>
+    </body>
+</html>

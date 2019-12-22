@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>아코디언메뉴.js</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	
+	
+
+<style type="text/css">
+*{margin:0; padding:0; box-sizing:border-box;}
+ul li{list-style:none;}
+ 
+</style>
+    
+</head>
+<body>
+   
+    <script type="text/javascript">
+        var a = 1;
+        let b = 2;
+        const c = 3;
+        
+        const daysOfWeek = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+        console.log(daysOfWeek[6]);
+        const ju = {
+            name:"jeonguk",
+            age:28,
+            gender:"Male",
+            isHandsome:true,
+            favMovie: ["신과함께","아이언맨","어밴저스"],
+            favFood: [
+                {
+                    name: "김치",
+                    fatty: false
+                },{
+                    name: "불고기",
+                    fatty: true
+                }
+            ]
+        };
+        console.log(ju.gender);
+        ju.gender = "Female";
+        console.log(ju.gender);
+        console.log(ju.favFood[0])
+        
+        function jeongUk(name, age){
+            return `Hello! ${name} you have  ${age} years old`;
+        }
+        var sayHello = jeongUk("jeonguk",28);
+        console.log(sayHello);
+        var sayHello = jeongUk("matthew",28);
+        console.log(sayHello);
+        
+        const caculator = {
+            plus: function(a,b){return a+b},
+            minus: function(a,b){return a-b},
+            gop: function(a,b){return a*b},
+            na: function(a,b){return a/b},
+            po: function(a,b){return a**b}
+        }
+        console.log(caculator.plus(5,5));
+        console.log(caculator.minus(5,5));
+        console.log(caculator.gop(5,5));
+        console.log(caculator.na(5,5));
+        console.log(caculator.po(5,5));
+        
+        
+    </script>
+</body>
+</html>
