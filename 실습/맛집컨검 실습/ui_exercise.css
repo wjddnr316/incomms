@@ -515,6 +515,30 @@ a:hover{
 }
 .sc_news .info_area .list_category{
   margin-bottom:7px;
+  color:#666;
+}
+.sc_news .info_area .list_category .news_brand{
+  margin-right:8px;
+}
+.sc_news .info_area .list_category .news_brand:after{
+    display:inline-block;
+    width:1px;
+    height:12px;
+    background-color:#e8e8e8;
+    vertical-align:bottom;
+    margin-left:8px;
+    content:'';
+}
+.sc_news .info_area .list_category .news_type{
+}
+.sc_news .info_area .list_category .news_type:before{
+  display:inline-block;
+  width:1px;
+  height:12px;
+  background-color:#e8e8e8;
+  vertical-align:bottom;
+  margin:0 8px;
+  content:'';
 }
 .sc_news .info_area .list_info{
   line-height:18px;

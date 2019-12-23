@@ -1,0 +1,458 @@
+@charset="utf-8";
+body,div, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, address, fieldset, form, object, th, td, button{
+  margin: 0;
+  padding: 0;
+}
+body,input,fieldset,select,textarea{
+  font-family:'굴림',gulim,'나눔고딕','NanumGothic','맑은고딕','MalgunGothic','돋움','dotum',Helvetica,sans-serif;
+  font-size: 12px;
+}
+html[data-useragent*='mac'] body * {
+	font-family: 'Apple SD Gothic NEO',helvetica,sans-serif !important;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size:12px;
+}
+h4,h5{
+  font-weight:normal;
+}
+ul,ol{
+  list-style:none;
+}
+img{
+  border:none;
+  vertical-align:top;
+}
+a{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:underline;
+}
+
+.btn_report, .btn_close, .nx_related_title:after,.main_info .ico_weather, .per_time_weather .sub_panel_item .weather_ico{
+  background:url(./sp.jpg) no-repeat;
+}
+
+
+.blind{
+  position: absolute !important;
+  overflow: hidden !important;
+  width:1px !important;
+  height:1px !important;
+  margin:-1px !important;
+  clip:rect(0,0,0,0) !important;
+}
+.ellp{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.ellp2{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+.ellp3{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+}
+.main_pack{
+  width: 660px;
+  margin: 0 auto;
+  border-right:1px solid #e8e8e8;
+  zoom: 1;
+}
+.main_pack .inner{
+  margin:0 35px 0 25px;
+}
+.section_title{
+  padding:23px 0 11px 24px;
+  font-weight:bold;
+  border-top:1px solid #e8e8e8;
+}
+
+
+.nx_related_keywords{
+  position:relative;
+  padding-right:50px;
+  padding-bottom:15px;
+}
+.nx_related_title{
+  float:left;
+  margin-top:11px;
+  margin-right:14px;
+  letter-spacing:-1px;
+  font-weight:bold;
+}
+.nx_related_title:after{
+  display:inline-block;
+  width:16px;
+  height:16px;
+  margin-left:6px;
+  background-position:-34px -24px;
+  content:'';
+  vertical-align:-3px;
+}
+.nx_related_keywords dd{
+  overflow:hidden;
+  padding-top:2px;
+}
+.nx_related_keywords .keywords_list li{
+  float:left;
+  margin-top:11px;
+  margin-right:13px;
+}
+.nx_related_keywords .related_option{
+  position:absolute;
+  top:11px;
+  right:0;
+}
+.btn_report{
+  display:inline-block;
+  width:30px;
+  height:18px;
+  margin-right:2px;
+  background-position:-1px 0;
+}
+.btn_close{
+  display:inline-block;
+  width:18px;
+  height:18px;
+  background-position:-33px 0;
+}
+.sc_header{
+  padding-top:25px;
+  padding-bottom:12px;
+  border-top:1px solid #e8e8e8;
+  font-size:13px;
+}
+.sc_box{
+  margin-left:10px;
+  border:1px solid #e8e8e8;
+}
+.sc_sort_title{
+  padding:15px 0 11px 23px;
+}
+
+.sc_box .main_tab{
+  border-top:1px solid #e8e8e8;
+}
+.sc_box .main_tab .tab_list{
+  display:table;
+  table-layout:fixed;
+  box-sizing:border-box;
+  width:100%;
+  padding: 0 24px 0 23px;
+  text-align:center;
+}
+.sc_box .main_tab .tab_list .item{
+  display:table-cell;
+}
+.sc_box .main_tab .tab_list .item a{
+  display:block;
+  margin:0 5px;
+}
+.sc_box .main_tab .tab_list .item .menu{
+  display:inline-block;
+  height:34px;
+  padding:0 6px;
+  line-height:36px;
+  color:#666;
+}
+.sc_box .main_tab .tab_list .item.on .menu{
+  border-bottom:2px solid #03a83d;
+  font-weight:bold;
+  color:#03a83d;
+}
+.main_panel .area_info{
+  margin-bottom:9px;
+  border-top:1px solid #e8e8e8;
+}
+.main_panel .area_info:after{
+  display:block;
+  clear:both;
+  content:'';
+}
+.today_weather .main_info{
+  float:left;
+  width:344px;
+  padding:30px 0 25px 32px;
+}
+.tomorrow_weather .main_info{
+  float:left;
+  width:50%;
+  padding-top:28px;
+  text-align:center;
+}
+.main_info .info_data{
+  overflow:hidden;
+  padding-left:15px;
+}
+.main_info .ico_weather{
+  float:left;
+  width:112px;
+  height:112px;
+  background-position:-50px center;
+}
+.main_info .temperature{
+  margin-top:-7px;
+}
+.main_info .temperature sup{
+  font-size:30px;
+  font-weight:bold;
+  vertical-align:17px;
+}
+.main_info .temperature .num{
+  font-family:Helvetica;
+  margin-left:-5px;
+  font-size:56px;
+  font-weight:500;
+}
+.main_info .compare{
+  margin-top:5px;
+}
+.main_info .min_max_temp{
+  display:inline-block;
+  margin-top:9px;
+}
+.main_info .min_max_temp .min_temp{
+  font-weight:bold;
+  color:#00a1ed;
+}
+.main_info .min_max_temp .max_temp{
+  font-weight:bold;
+  color:#f73f3c;
+  margin-right:7px;
+}
+.main_info .rainfall{
+  margin-top:9px;
+}
+.main_info .rainfall .num{
+  font-weight:bold;
+  color:#40b8f1;
+}
+
+.sub_info{
+  overflow:hidden;
+  padding:36px 0 12px 0;
+}
+.sub_info .air_condition_list{
+  padding-top:33px;
+  padding-left:23px;
+  padding-bottom: 12px;
+  border-left:1px solid #f3f5f8;
+}
+.sub_info .info_title{
+  float:left;
+  min-width:65px;
+}
+.sub_info .info_title + dd{
+  overflow:hidden;
+  margin-bottom:9px;
+}
+
+/* .sub_panel_item{
+  display:none;
+}
+.sub_panel_item.on{
+  display:block;
+} */
+.tomorrow_weather .weather_info .temp_info{
+  margin:13px 0 10px;
+}
+.tomorrow_weather .weather_info .temp_info:after{
+  display:block;
+  clear:both;
+  content:'';
+}
+.tomorrow_weather .wt_ico{
+  display:inline-block;
+  vertical-align:middle;
+  width:54px; height:54px;
+  margin-right:6px;
+  background:url(./sp_wt_status_54.png) no-repeat;
+}
+.tomorrow_weather .temp_num{
+  display:inline-block;
+  vertical-align:middle;
+  font-family:Helvetica;
+  font-size:50px;
+  font-weight:500;
+}
+.tomorrow_weather .temp_num .tempmark{
+  font-family:'굴림','gulim',sans-serif;
+  font-size:24px;
+  vertical-align:16px;
+}
+.tomorrow_weather .temp_text{
+  margin-bottom:7px;
+}
+.tomorrow_weather .area_info{
+  margin-bottom:29px;
+}
+/*시간대별(날씨 강수 바람 습도)*/
+.sub_panel_item{
+  position:relative;
+  padding:12px 0 19px;
+}
+.per_time_weather .section_header{
+  position:relative;
+}
+.per_time_weather .sub_tab_list{
+  position:absolute;
+  overflow:hidden;
+  right:23px;
+  top:25px;
+}
+.per_time_weather .sub_tab_list .list_item{
+  float:left;
+  margin-left:18px;
+}
+.per_time_weather .sub_tab_list .btn_tab{
+  display:block;
+  padding-left:12px;
+  color:#666;
+}
+.per_time_weather .sub_tab_list .btn_tab:hover{
+  text-decoration:none;
+}
+.per_time_weather .sub_tab_list .btn_tab:before{
+  display:inline-block;
+  width:5px;
+  height:5px;
+  margin-left:-12px;
+  margin-right:5px;
+  background-color:#c5c6c7;
+  border-radius:2.5px;
+  vertical-align:middle;
+  content:'';
+}
+.per_time_weather .sub_tab_list .list_item.on .btn_tab:before{
+  background-color:#27c758;
+}
+.per_time_weather .area_graph{
+  position:absolute;
+  top:34px;
+  width:100%;
+  height:41px;
+  background:rgba(0,0,0,.1);
+  opacity:0.2;
+}
+.per_time_weather .time_graph_list:after{
+  display:block;
+  clear:both;
+  content:'';
+}
+
+.per_time_weather .time_graph_list .list_item{
+  position:relative;
+  float:left;
+  width:12.5%;
+  height:126px;
+}
+.per_time_weather .time_graph_list .time{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:18px;
+  font-size:11px;
+  line-height:19px;
+  text-align:center;
+  vertical-align:1px;
+}
+.per_time_weather .time_graph_list .time.ontime{
+  left:50%;
+  width:40px;
+  margin-left:-20px;
+  border-radius:9px;
+  background-color:#00c63c;
+  color:#fff;
+  font-weight:bold;
+}
+
+.per_time_weather .time_graph_list .weather_ico{
+  position:absolute;
+  bottom:23px;
+  left:50%;
+  width:30px;
+  height:30px;
+  margin-left:-15px;
+  background-position:-161px 0;
+}
+.per_time_weather .time_graph_list .weather_ico.sun{
+  background-position:-251px 0;
+}
+.per_time_weather .time_graph_list .numerical{
+  position:absolute;
+  top:23px;
+  width:100%;
+  text-align:center;
+}
+.per_time_weather .time_graph_list .numerical .graph_ico_dot{
+  position:absolute;
+  left:50%;
+  bottom:-5px;
+  width:3px;
+  height:3px;
+  margin-left:-1.5px;
+  border-radius:2px;
+  border:1px solid #c6c9cd;
+}
+
+.per_time_weather .time_graph_list .rainfall{
+  position:absolute;
+  left:0;
+  bottom:23px;
+}
+.per_time_weather .time_graph_list .rainfall span{
+  display:block;
+  width:72.5px;
+  height:20px;
+  margin-left:39px;
+  line-height:20px;
+  background-color:#e8e8e8;
+  font-size:11px;
+  text-align:center;
+  color: #adaeae;
+}
+.per_time_weather .time_graph_list .rainfall.first span{
+  width:75.5px;
+  margin-left:36px;
+}
+.per_time_weather .time_graph_list .rainfall.last span{
+  display:none;
+}
+
+
+.sub_panel_item.panel_wind .weather_ico{
+  background:url(./sp_arrow.png) no-repeat;
+}
+.per_time_weather .sub_panel_item.panel_wind .weather_ico{
+  background-position:0;
+}
+
+
+.sub_panel_item.panel_humidity .weather_ico{
+  background:none;
+}
+.sub_panel_item.panel_humidity .weather_ico .cup_bg{
+  position:absolute;
+  left:0;right:0;
+  bottom:0;top:0;
+  background:url(./sp_nwearther.png) no-repeat;
+  background-position:-0px -53px;
+}
+.panel_humidity .weather_ico .water_per{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: skyblue;
+      height: 61%;
+}
