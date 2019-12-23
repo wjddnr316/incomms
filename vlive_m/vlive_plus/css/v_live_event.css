@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/*NCT_LIFE 191210*/
+.nct_life_191210 .contents {
+  overflow: hidden;
+  padding-top: 118px;
+}
+.nct_life_191210 .spot{
+  height:442px;
+  background:#182b17 url("../im/191210_nct_life/en/bg_spot_v2.jpg") no-repeat 50% 0;
+  background-size:512px 442px;
+}
+.nct_life_191210 .section_info{
+  position:relative;
+  height:525px;
+  background:#ffe28c url("../im/191210_nct_life/en/bg_section_info.jpg") no-repeat 50% 0;
+  background-size:512px 525px;
+}
+.nct_life_191210 .section_access{
+  height:251px;
+  background:#ffd34f url("../im/191210_nct_life/en/bg_section_access.jpg") no-repeat 50% 0;
+  background-size:512px 251px;
+}
+.nct_life_191210 .section_schedule{
+  position:relative;
+  height:1368px;
+  background:#56c9ae url("../im/191210_nct_life/en/bg_section_schedule_v2.jpg") no-repeat 50% 0;
+  background-size:512px 1368px;
+}
+.nct_life_191210 .section_footer{
+  height:35px;
+  background:#3ab094 url("../im/191210_nct_life/en/bg_footer.jpg") no-repeat 50% 0;
+  background-size:512px 35px;
+}
+.nct_life_191210 .btn_link{
+  position:absolute;
+  left:50%;
+  bottom:35px;
+  width:177px;
+  height:40px;
+  margin-left:-90px;
+}
+.nct_life_191210 .section_schedule .btn_link{
+  bottom:50px;
+}
+
+[lang="es"] .nct_life_191210 .spot{
+  background-image:url("../im/191210_nct_life/es/bg_spot.jpg");
+}
+[lang="es"] .nct_life_191210 .section_info{
+  background-image:url("../im/191210_nct_life/es/bg_section_info.jpg");
+}
+[lang="es"] .nct_life_191210 .section_access{
+  background-image:url("../im/191210_nct_life/es/bg_section_access.jpg");
+}
+[lang="es"] .nct_life_191210 .section_schedule{
+  background-image:url("../im/191210_nct_life/es/bg_section_schedule_v2.jpg");
+}
+[lang="es"] .nct_life_191210 .section_footer{
+  background-image:url("../im/191210_nct_life/es/bg_footer.jpg");
+}
+
+[lang="id"] .nct_life_191210 .spot{
+  background-image:url("../im/191210_nct_life/id/bg_spot_v2.jpg");
+}
+[lang="id"] .nct_life_191210 .section_info{
+  background-image:url("../im/191210_nct_life/id/bg_section_info.jpg");
+}
+[lang="id"] .nct_life_191210 .section_access{
+  background-image:url("../im/191210_nct_life/id/bg_section_access.jpg");
+}
+[lang="id"] .nct_life_191210 .section_schedule{
+  background-image:url("../im/191210_nct_life/id/bg_section_schedule_v2.jpg");
+}
+[lang="id"] .nct_life_191210 .section_footer{
+  background-image:url("../im/191210_nct_life/id/bg_footer.jpg");
+}
+
+[lang="ja"] .nct_life_191210 .spot{
+  background-image:url("../im/191210_nct_life/ja/bg_spot_v2.jpg");
+}
+[lang="ja"] .nct_life_191210 .section_info{
+  background-image:url("../im/191210_nct_life/ja/bg_section_info.jpg");
+}
+[lang="ja"] .nct_life_191210 .section_access{
+  background-image:url("../im/191210_nct_life/ja/bg_section_access.jpg");
+}
+[lang="ja"] .nct_life_191210 .section_schedule{
+  background-image:url("../im/191210_nct_life/ja/bg_section_schedule_v2.jpg");
+}
+[lang="ja"] .nct_life_191210 .section_footer{
+  background-image:url("../im/191210_nct_life/ja/bg_footer.jpg");
+}
+
+[lang="th"] .nct_life_191210 .spot{
+  background-image:url("../im/191210_nct_life/th/bg_spot_v2.jpg");
+}
+[lang="th"] .nct_life_191210 .section_info{
+  background-image:url("../im/191210_nct_life/th/bg_section_info.jpg");
+}
+[lang="th"] .nct_life_191210 .section_access{
+  background-image:url("../im/191210_nct_life/th/bg_section_access.jpg");
+}
+[lang="th"] .nct_life_191210 .section_schedule{
+  background-image:url("../im/191210_nct_life/th/bg_section_schedule_v2.jpg");
+}
+[lang="th"] .nct_life_191210 .section_footer{
+  background-image:url("../im/191210_nct_life/th/bg_footer.jpg");
+}
+
+[lang="vi"] .nct_life_191210 .spot{
+  background-image:url("../im/191210_nct_life/vi/bg_spot_v2.jpg");
+}
+[lang="vi"] .nct_life_191210 .section_info{
+  background-image:url("../im/191210_nct_life/vi/bg_section_info.jpg");
+}
+[lang="vi"] .nct_life_191210 .section_access{
+  background-image:url("../im/191210_nct_life/vi/bg_section_access.jpg");
+}
+[lang="vi"] .nct_life_191210 .section_schedule{
+  background-image:url("../im/191210_nct_life/vi/bg_section_schedule_v2.jpg");
+}
+[lang="vi"] .nct_life_191210 .section_footer{
+  background-image:url("../im/191210_nct_life/vi/bg_footer.jpg");
+}
+
+[lang="zh-Hans"] .nct_life_191210 .spot{
+  background-image:url("../im/191210_nct_life/zh_hans/bg_spot_v2.jpg");
+}
+[lang="zh-Hans"] .nct_life_191210 .section_info{
+  background-image:url("../im/191210_nct_life/zh_hans/bg_section_info.jpg");
+}
+[lang="zh-Hans"] .nct_life_191210 .section_access{
+  background-image:url("../im/191210_nct_life/zh_hans/bg_section_access.jpg");
+}
+[lang="zh-Hans"] .nct_life_191210 .section_schedule{
+  background-image:url("../im/191210_nct_life/zh_hans/bg_section_schedule.jpg");
+}
+[lang="zh-Hans"] .nct_life_191210 .section_footer{
+  background-image:url("../im/191210_nct_life/zh_hans/bg_footer.jpg");
+}
+
+[lang="zh-Hant"] .nct_life_191210 .spot{
+  background-image:url("../im/191210_nct_life/zh_hant/bg_spot_v2.jpg");
+}
+[lang="zh-Hant"] .nct_life_191210 .section_info{
+  background-image:url("../im/191210_nct_life/zh_hant/bg_section_info.jpg");
+}
+[lang="zh-Hant"] .nct_life_191210 .section_access{
+  background-image:url("../im/191210_nct_life/zh_hant/bg_section_access.jpg");
+}
+[lang="zh-Hant"] .nct_life_191210 .section_schedule{
+  background-image:url("../im/191210_nct_life/zh_hant/bg_section_schedule_v2.jpg");
+}
+[lang="zh-Hant"] .nct_life_191210 .section_footer{
+  background-image:url("../im/191210_nct_life/zh_hant/bg_footer.jpg");
+}

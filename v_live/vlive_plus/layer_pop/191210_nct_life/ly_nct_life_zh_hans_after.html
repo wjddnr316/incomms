@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>VLIVE+</title>
+<link rel="stylesheet" href="css/ly_nct_life.css">
+</head>
+<body>
+<div id="wrap">
+    <!-- content -->
+    <div class="content">
+        <div class="nct_life_vliveplus">
+            <div class="spot">
+            		<!-- [D] 언어선택박스 오픈 시 div.lego_lang_select 요소에 open 클래스를 추가해주세요. -->
+                <div class="lego_lang_select">
+          				<!-- [D] 선택된 언어 텍스트는 a.area_choice 요소 안에 넣어주세요.-->
+          				<a href="#" class="area_choice">KOREAN</a>
+          				<ul class="area_lang_list">
+          					<li>
+          						<a href="#">ENGLISH</a>
+          					</li>
+          					<li>
+          						<a href="#">日本語</a>
+          					</li>
+          					<li>
+          						<a href="#">中文(繁體)</a>
+          					</li>
+          					<li>
+          						<a href="#">中文(简体)</a>
+          					</li>
+          					<li>
+          						<a href="#">Tiếng Việt</a>
+          					</li>
+          					<li>
+          						<a href="#">Bahasa Indonesia</a>
+          					</li>
+          					<li>
+          						<a href="#">ภาษาไทย</a>
+          					</li>
+          					<li>
+          						<a href="#">Español</a>
+          					</li>
+          				</ul>
+          			</div>
+                <img src="img/zh_hans/ly_nct_life_after_v2.jpg" width="800" height="1209" alt="VLIVE+ 支持创作活动。 NCTzen们！请用'抢先观看'在第一时间欣赏《NCT LIFE in 春川&洪川 》吧~" class="area_img">
+                <div class="link_area">
+                    <a href="#">
+                        <span class="blind">前往 NCT LIFE in 春川&amp;洪川 V LIVE+</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+  document.querySelector('.lego_lang_select').addEventListener('click',function(){
+    this.classList.toggle('open');
+  });
+</script>
+</body>
+</html>
