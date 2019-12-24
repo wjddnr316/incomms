@@ -1646,25 +1646,25 @@
     //   });
     // };
     var tabList = document.querySelectorAll('.main_tab .item');
-
+    var tabContent = document.getElementsByClassName('main_panel_area');
+    
     function li_click(idx){
         tabList[idx].onclick = function(){
             console.log(idx);
 
             if(tabList[idx].getAttribute('class')!='on'){
                 for(var i = 0; i < tabList.length; i ++){
-                    tabList[i].removeAttribute('class','on');
+                    tabContent[i].style.display = 'none';
+                    tabList[i].removeAttribute('class');
                     tabList[i].setAttribute('class','item')
                 }
                 tabList[idx].setAttribute('class','item on');
-            } else{
-                tabList[idx].removeAttribute('class','on');
+                tabContent[idx].style.display = 'block';
             }
-
         };
     }
 
-    for(var i=0; i<tabList.length; i++){
+    for(var i = 0; i < tabList.length; i ++){
         li_click(i);
     }
 
