@@ -62,6 +62,21 @@ a:hover{
   -webkit-box-orient:vertical;
   -webkit-line-clamp:3;
 }
+
+.main_panel_area{
+  display:none;
+}
+.main_panel_area.active{
+  display:block;
+}
+
+.sub_panel_item{
+  display:none;
+}
+.sub_panel_item.on{
+  display:block;
+}
+
 .main_pack{
   width: 660px;
   margin: 0 auto;

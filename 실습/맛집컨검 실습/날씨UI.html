@@ -39,14 +39,14 @@
                          <h3 class="sc_sort_title">강원도 춘천시 퇴계동</h3>
                          <div class="main_tab">
                              <ul class="tab_list">
-                                 <li class="item on"><a href="#"><span class="menu">오늘</span></a></li>
-                                 <li class="item"><a href="#"><span class="menu">내일</span></a></li>
-                                 <li class="item"><a href="#"><span class="menu">모레</span></a></li>
-                                 <li class="item"><a href="#"><span class="menu">월간</span></a></li>
+                                 <li class="item on" data-tabnum='0'><a href="#"><span class="menu">오늘</span></a></li>
+                                 <li class="item" data-tabnum='1'><a href="#"><span class="menu">내일</span></a></li>
+                                 <li class="item" data-tabnum='2'><a href="#"><span class="menu">모레</span></a></li>
+                                 <li class="item" data-tabnum='3'><a href="#"><span class="menu">월간</span></a></li>
                              </ul>
                          </div>
                          <div class="main_panel">
-                             <div class="today_weather  main_panenl_area">
+                             <div class="today_weather  main_panel_area active">
                                <div class="area_info">
                                  <div class="main_info">
                                      <div class="ico_weather"></div>
@@ -80,8 +80,8 @@
                                  <div class="section_header">
                                      <h4 class="section_title">시간대별 날씨</h4>
                                      <ul class="sub_tab_list">
-                                         <li class="list_item"><a href="#" class="btn_tab">날씨</a></li>
-                                         <li class="list_item on"><a href="#" class="btn_tab">강수</a></li>
+                                         <li class="list_item on"><a href="#" class="btn_tab">날씨</a></li>
+                                         <li class="list_item"><a href="#" class="btn_tab">강수</a></li>
                                          <li class="list_item"><a href="#" class="btn_tab">바람</a></li>
                                          <li class="list_item"><a href="#" class="btn_tab">습도</a></li>
                                      </ul>
@@ -561,7 +561,7 @@
                                  </div>
                                </div>
                              </div>
-                             <div class="tomorrow_weather main_panenl_area">
+                             <div class="tomorrow_weather main_panel_area">
                                  <div class="area_info">
                                      <div class="main_info morning">
                                          <dl class="weather_info">
@@ -1070,7 +1070,7 @@
                                      </div>
                                  </div>
                              </div>
-                             <div class="tomorrow_weather main_panenl_area">
+                             <div class="tomorrow_weather main_panel_area">
                                  <div class="area_info">
                                      <div class="main_info morning">
                                          <dl class="weather_info">
@@ -1579,7 +1579,7 @@
                                    </div>
                                  </div>
                              </div>
-                             <div class="monthly_weather main_panel_content">
+                             <div class="monthly_weather main_panel_area">
                                  <dl class="monthly_info_list">
                                      <dt>12월 예보</dt>
                                      <dd>
@@ -1635,13 +1635,61 @@
         </div><!-- //container -->
     </div><!-- //wrap -->
     <script>
-      var mainTabBtn = document.querySelectorAll(".main_tab .item");
-      var panelItem = document.querySelectorAll('.panel_weather>div')
-      for(var i = 0; i < mainTabBtn.length; i ++){
-        mainTabBtn[i].addEventListener('click',function(){
-          panelItem[i].classList.add('on');
-        });
-      }
+
+    // var tabList = document.querySelectorAll('.main_tab .item');
+    //
+    // for(var i = 0; i < tabList.length; i ++){
+    //   tabList[i].addEventListener('click',function(idxNum){
+    //     this.classList.add('on');
+    //     idxNum = getIndex(this);
+    //     console.log(idxNum)
+    //   });
+    // };
+    var tabList = document.querySelectorAll('.main_tab .item');
+
+    function li_click(idx){
+        tabList[idx].onclick = function(){
+            console.log(idx);
+
+            if(tabList[idx].getAttribute('class')!='on'){
+                for(var i = 0; i < tabList.length; i ++){
+                    tabList[i].removeAttribute('class','on');
+                    tabList[i].setAttribute('class','item')
+                }
+                tabList[idx].setAttribute('class','item on');
+            } else{
+                tabList[idx].removeAttribute('class','on');
+            }
+
+        };
+    }
+
+    for(var i=0; i<tabList.length; i++){
+        li_click(i);
+    }
+
+    // var tabList = document.querySelectorAll('.main_tab .item')
+    //
+    // Array.prototype.forEach.call(tabList, function(list) {
+    //     list.children[0].addEventListener('click', function(e) {
+    //
+    //         e.preventDefault()
+    //
+    //         var tabContent = document.getElementsByClassName('.main_panel_area')
+    //         var tabNum = this.getAttribute('data-tabnum')
+    //
+    //         Array.prototype.forEach.call(tabContent, function(cont, i) {
+    //             cont.style.display = 'none'
+    //             tabList[i].className = 'item'
+    //         })
+    //
+    //         tabContent[tabNum].style.display = 'block'
+    //             if(list.className.indexOf('on') == -1) {
+    //             list.className = 'item on'
+    //         }
+    //     })
+    // })
+
     </script>
   </body>
 </html>
