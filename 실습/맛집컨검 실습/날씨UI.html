@@ -46,7 +46,7 @@
                              </ul>
                          </div>
                          <div class="main_panel">
-                             <div class="today_weather  main_panel_area active">
+                             <div class="today_weather  main_panel_area">
                                <div class="area_info">
                                  <div class="main_info">
                                      <div class="ico_weather"></div>
@@ -1579,18 +1579,34 @@
                                    </div>
                                  </div>
                              </div>
-                             <div class="monthly_weather main_panel_area">
+                             <div class="monthly_weather main_panel_area active">
                                  <dl class="monthly_info_list">
-                                     <dt>12월 예보</dt>
-                                     <dd>
+                                     <dt class="info_title">
+                                        <a href="#">12월 예보</a>
+                                        <div class="select_box">
+                                            <ul class="select_list">
+                                                <li class="item">12월 예보</li>
+                                                <li class="item">1월 예보</li>
+                                                <li class="item">2월 예보</li>
+                                            </ul>
+                                        </div>
+                                    </dt>
+                                    <dd>
                                          <p>대륙고기압과 이동성 고기압의 영향을 주기적으로 받겠습니다. 기온은 평년과 비슷하거나 높겠으나 대륙고기압의 영향으로 크게 떨어질 때가 있겠습니다. (월평균기온) 평년(-2.5~-1.3℃)과 비슷하거나 높겠습니다. (월강수량) 평년(11.9~26.4㎜)과 비슷하겠습니다.</p>
                                          <dl class="monthly_sub_info">
-                                             <dt>평년기온</dt><dd><span class="num">-2.5~-1.3</span> 비슷함</dd>
+                                             <dt>평년기온</dt><dd><span class="num">-2.5~-1.3</span> 비슷함<span class="line"></span></dd>
                                              <dt>평년강수량</dt><dd><span class="num">11.9~26.4mm</span> 비슷함</dd>
                                          </dl>
                                      </dd>
                                  </dl>
-                                 <table>
+                                 <table class="weather_table">
+                                    <caption class="blind">주간날씨 전망을 설명하는 표</caption>
+                                    <colgroup>
+                                      <col class="col1">
+                                      <col class="col2">
+                                      <col class="col3">
+                                      <col class="col4">
+                                    </colgroup>
                                      <thead>
                                          <tr>
                                              <th>주간</th>
@@ -1603,26 +1619,26 @@
                                          <tr>
                                              <th>(12.16.~12.22.)</th>
                                              <td>이동성 고기압의 영향을 주로 받겠으나,남쪽을 지나는 저기압의 영향을 받을 때가 있겠습니다. (주평균기온) 평년(-3.8~-1.2℃)보다 높겠습니다. (주강수량) 평년(0.6~4.5㎜)과 비슷하거나 많겠습니다.</td>
-                                             <td>-3.8~-1.2˚ 높음</td>
-                                             <td>0.6~4.5mm 비슷함</td>
+                                             <td><span class="num">-3.8~-1.2˚ 높음</td>
+                                        </span>     <td><span class="num">0.6~4.5mm 비슷함</span></td>
+                                        </tr>
+                                        <tr>
+                                           <th>(12.16.~12.22.)</th>
+                                           <td>이동성 고기압의 영향을 주로 받겠으나,남쪽을 지나는 저기압의 영향을 받을 때가 있겠습니다. (주평균기온) 평년(-3.8~-1.2℃)보다 높겠습니다. (주강수량) 평년(0.6~4.5㎜)과 비슷하거나 많겠습니다.</td>
+                                           <td><span class="num">-3.8~-1.2˚</span> 높음</td>
+                                           <td><span class="num">0.6~4.5mm</span> 비슷함</td>
                                          </tr>
                                          <tr>
                                            <th>(12.16.~12.22.)</th>
                                            <td>이동성 고기압의 영향을 주로 받겠으나,남쪽을 지나는 저기압의 영향을 받을 때가 있겠습니다. (주평균기온) 평년(-3.8~-1.2℃)보다 높겠습니다. (주강수량) 평년(0.6~4.5㎜)과 비슷하거나 많겠습니다.</td>
-                                           <td>-3.8~-1.2˚ 높음</td>
-                                           <td>0.6~4.5mm 비슷함</td>
+                                           <td><span class="num">-3.8~-1.2˚</span> 높음</td>
+                                           <td><span class="num">0.6~4.5mm</span> 비슷함</td>
                                          </tr>
                                          <tr>
                                            <th>(12.16.~12.22.)</th>
                                            <td>이동성 고기압의 영향을 주로 받겠으나,남쪽을 지나는 저기압의 영향을 받을 때가 있겠습니다. (주평균기온) 평년(-3.8~-1.2℃)보다 높겠습니다. (주강수량) 평년(0.6~4.5㎜)과 비슷하거나 많겠습니다.</td>
-                                           <td>-3.8~-1.2˚ 높음</td>
-                                           <td>0.6~4.5mm 비슷함</td>
-                                         </tr>
-                                         <tr>
-                                           <th>(12.16.~12.22.)</th>
-                                           <td>이동성 고기압의 영향을 주로 받겠으나,남쪽을 지나는 저기압의 영향을 받을 때가 있겠습니다. (주평균기온) 평년(-3.8~-1.2℃)보다 높겠습니다. (주강수량) 평년(0.6~4.5㎜)과 비슷하거나 많겠습니다.</td>
-                                           <td>-3.8~-1.2˚ 높음</td>
-                                           <td>0.6~4.5mm 비슷함</td>
+                                           <td><span class="num">-3.8~-1.2˚</span> 높음</td>
+                                           <td><span class="num">0.6~4.5mm</span> 비슷함</td>
                                          </tr>
                                      </tbody>
                                  </table>
@@ -1635,19 +1651,9 @@
         </div><!-- //container -->
     </div><!-- //wrap -->
     <script>
-
-    // var tabList = document.querySelectorAll('.main_tab .item');
-    //
-    // for(var i = 0; i < tabList.length; i ++){
-    //   tabList[i].addEventListener('click',function(idxNum){
-    //     this.classList.add('on');
-    //     idxNum = getIndex(this);
-    //     console.log(idxNum)
-    //   });
-    // };
     var tabList = document.querySelectorAll('.main_tab .item');
     var tabContent = document.getElementsByClassName('main_panel_area');
-    
+
     function li_click(idx){
         tabList[idx].onclick = function(){
             console.log(idx);

@@ -29,7 +29,10 @@ a{
 a:hover{
   text-decoration:underline;
 }
-
+table{
+  border-collapse:collapse;
+  border:0;
+}
 .btn_report, .btn_close, .nx_related_title:after,.main_info .ico_weather, .per_time_weather .sub_panel_item .weather_ico{
   background:url(./sp.jpg) no-repeat;
 }
@@ -163,7 +166,7 @@ a:hover{
   table-layout:fixed;
   box-sizing:border-box;
   width:100%;
-  padding: 0 24px 0 23px;
+  padding: 0 24px;
   text-align:center;
 }
 .sc_box .main_tab .tab_list .item{
@@ -185,9 +188,11 @@ a:hover{
   font-weight:bold;
   color:#03a83d;
 }
+.main_panel_area{
+  border-top:1px solid #e8e8e8;
+}
 .main_panel .area_info{
   margin-bottom:9px;
-  border-top:1px solid #e8e8e8;
 }
 .main_panel .area_info:after{
   display:block;
@@ -470,4 +475,92 @@ a:hover{
       right: 0;
       background-color: skyblue;
       height: 61%;
+}
+.monthly_weather .select_box{
+  display:none;
+}
+.monthly_weather{
+  padding:21px 25px 0 23px;
+}
+.monthly_weather .monthly_info_list{
+  display:table;
+  table-layout:fixed;
+}
+.monthly_weather .monthly_info_list .info_title{
+  position:relative;
+  display:table-cell;
+  vertical-align:middle;
+  min-width:78px;
+  padding-left:5px;
+  font-weight:bold;
+}
+.monthly_weather .monthly_info_list .info_title:after{
+  content:'∨';
+  position:absolute;
+  right:3px;
+  top:50%;
+  margin-top:-8px;
+}
+.monthly_weather .monthly_info_list>dd{
+  display:table-cell;
+  line-height:20px;
+}
+.monthly_sub_info{
+  margin-top:3px;
+}
+.monthly_sub_info:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.monthly_sub_info dt,
+.monthly_sub_info dd{
+  float:left;
+}
+.monthly_sub_info dt{
+  color:#a5a5a5;
+  margin-right:8px;
+}
+.monthly_sub_info dd .line{
+  display:inline-block;
+  width:1px;
+  height:12px;
+  margin:0 11px 0 6px;
+  vertical-align:middle;
+  background-color:#e8e8e8;
+}
+.weather_table{
+  width:100%;
+  margin:18px 0 24px;
+  border-top:1px solid #e8e8e8;
+  table-layout:fixed;
+  line-height:20px;
+  word-break:break-all;
+}
+.weather_table .col1, .col2,.col3{
+  border-right:1px solid #e8e8e8;
+}
+.weather_table .col1{
+  width:84px;
+}
+.weather_table .col2{
+  width:276px;
+}
+.weather_table .col3{
+  width:82px;
+  text-align:center;
+}
+.weather_table tr{
+  border-bottom:1px solid #e8e8e8;
+}
+.weather_table tbody th, .weather_table tbody td{
+  padding:15px 15px 12px;
+}
+.weather_table th{
+  font-weight:normal;
+}
+.weather_table thead th{
+  height:36px;
+  background-color:#f9fafc;
+  color:#777777;
 }

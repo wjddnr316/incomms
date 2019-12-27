@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+        <li class="on">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+    var li = document.querySelectorAll('li');
+
+    function liClick(idx){ //클로저를 사용하기 위해 인자값 전달 받아야함
+      li[idx].onclick = function(){ //클릭 이벤트
+        console.log(idx);
+
+        if(li[idx].getAttribute('class') != 'on'){ //class 속성의 값이 on이 아니라면
+          for(var i = 0; i <li.length; i++){ //초기화 시키기 위해 i 사용
+            li[i].removeAttribute('class') //class를 초기화
+          }
+          li[idx].setAttribute('class','on'); //선택된 클레스만 on을 추가
+        } else{
+          li[idx].removeAttribute('class')
+        }
+      }
+    }
+
+    for(var i = 0; i < li.length; i++){ //인자값 전달을 위해 for문 사용
+      liClick(i);
+    }
+    </script>
+  </body>
+</html>
