@@ -1627,7 +1627,7 @@
                                      </tbody>
                                  </table>
                              </div>
-                         </div><!-- //panel_weather -->
+                          </div><!-- //panel_weather -->
                        </div><!-- //sc_box -->
                    </div><!-- //inner -->
                 </div><!-- //main-pack -->
@@ -1645,9 +1645,10 @@
     //     console.log(idxNum)
     //   });
     // };
+
     var tabList = document.querySelectorAll('.main_tab .item');
     var tabContent = document.getElementsByClassName('main_panel_area');
-    
+
     function li_click(idx){
         tabList[idx].onclick = function(){
             console.log(idx);
@@ -1660,6 +1661,8 @@
                 }
                 tabList[idx].setAttribute('class','item on');
                 tabContent[idx].style.display = 'block';
+
+                tabContent[idx]('sub_tab_item');
             }
         };
     }
@@ -1667,6 +1670,16 @@
     for(var i = 0; i < tabList.length; i ++){
         li_click(i);
     }
+
+
+    var subTapContent = document.getElementsByClassName('sub_tab_area');
+
+    function subTabClick(subIdx){
+      subTabList[subIdx].onclick = function(){
+        console.log(subIdx);
+      }
+    }
+
 
     // var tabList = document.querySelectorAll('.main_tab .item')
     //
