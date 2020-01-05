@@ -46,7 +46,7 @@
                              </ul>
                          </div>
                          <div class="main_panel">
-                             <div class="today_weather  main_panel_area">
+                             <div class="today_weather main_panel_area active">
                                <div class="area_info">
                                  <div class="main_info">
                                      <div class="ico_weather"></div>
@@ -1579,7 +1579,7 @@
                                    </div>
                                  </div>
                              </div>
-                             <div class="monthly_weather main_panel_area active">
+                             <div class="monthly_weather main_panel_area">
                                  <dl class="monthly_info_list">
                                      <dt class="info_title">
                                         <a href="#">12월 예보</a>
@@ -1651,13 +1651,12 @@
         </div><!-- //container -->
     </div><!-- //wrap -->
     <script>
+
     var tabList = document.querySelectorAll('.main_tab .item');
     var tabContent = document.getElementsByClassName('main_panel_area');
 
     function li_click(idx){
         tabList[idx].onclick = function(){
-            console.log(idx);
-
             if(tabList[idx].getAttribute('class')!='on'){
                 for(var i = 0; i < tabList.length; i ++){
                     tabContent[i].style.display = 'none';
@@ -1667,7 +1666,26 @@
                 tabList[idx].setAttribute('class','item on');
                 tabContent[idx].style.display = 'block';
 
-                tabContent[idx]('sub_tab_item');
+                var subTabList = tabContent[idx].querySelectorAll('.sub_tab_list .list_item');
+                var subTabContent = tabContent[idx].querySelectorAll('.sub_panel_item');
+                function sub_click(subIdx){
+                  subTabList[subIdx].onclick = function(){
+
+                    if(subTabList[subIdx].getAttribute('class') != 'on'){
+                      for(var j = 0; j < subTabList.length; j ++){
+                        subTabList[j].removeAttribute('class');
+                        subTabList[j].setAttribute('class','list_item')
+                        subTabContent[j].style.display = 'none'
+                      }
+                      subTabList[subIdx].setAttribute('class','list_item on');
+                      subTabContent[subIdx].style.display = 'block';
+                    }
+                  }
+                }
+
+                for(var j = 0; j < subTabList.length; j ++){
+                  sub_click(j);
+                }
             }
         };
     }
@@ -1675,16 +1693,6 @@
     for(var i = 0; i < tabList.length; i ++){
         li_click(i);
     }
-
-
-    var subTapContent = document.getElementsByClassName('sub_tab_area');
-
-    function subTabClick(subIdx){
-      subTabList[subIdx].onclick = function(){
-        console.log(subIdx);
-      }
-    }
-
 
     // var tabList = document.querySelectorAll('.main_tab .item')
     //
